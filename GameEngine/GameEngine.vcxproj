@@ -1,0 +1,339 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{008D91A9-C942-4279-9C67-0AB33215B72B}</ProjectGuid>
+    <RootNamespace>GameEngine</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IncludePath>$(SolutionDir)PhysicsInterfaces;$(SourcePath)include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SourcePath)lib/x64;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <IncludePath>$(SolutionDir)PhysicsInterfaces;$(SourcePath)include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SourcePath)lib/x64;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <IncludePath>$(SolutionDir)PhysicsInterfaces;$(SourcePath)include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SourcePath)lib/x86;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <IncludePath>$(SolutionDir)PhysicsInterfaces;$(SourcePath)include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SourcePath)lib/x86;$(OutDir);$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>glfw3.lib;fmod_vc.lib;%(AdditionalDependencies);lua5.3.3-static.lib;gtest.lib</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>glfw3.lib;fmod64_vc.lib;%(AdditionalDependencies);lua5.3.3-static.lib;gtest.lib;assimp-vc140-mt.lib</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>glfw3.lib;fmod_vc.lib;%(AdditionalDependencies);lua5.3.3-static.lib;gtest.lib</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>glfw3.lib;fmod64_vc.lib;%(AdditionalDependencies);lua5.3.3-static.lib;gtest.lib;assimp-vc140-mt.lib</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="ApproachBehaviour.cpp" />
+    <ClCompile Include="BehaviourManager.cpp" />
+    <ClCompile Include="cAABB.cpp" />
+    <ClCompile Include="cAgent.cpp" />
+    <ClCompile Include="cAgentBufferManager.cpp" />
+    <ClCompile Include="cAgentManager.cpp" />
+    <ClCompile Include="cAgentThreaded.cpp" />
+    <ClCompile Include="cAnimationCurveCommand.cpp" />
+    <ClCompile Include="cAnimationState.cpp" />
+    <ClCompile Include="cAssimpBasic.cpp" />
+    <ClCompile Include="cAssimpBasic_Imp.cpp" />
+    <ClCompile Include="cBase.cpp" />
+    <ClCompile Include="cBird.cpp" />
+    <ClCompile Include="cBirdBufferManager.cpp" />
+    <ClCompile Include="cCamera.cpp" />
+    <ClCompile Include="cCannonBall.cpp" />
+    <ClCompile Include="cCharacter.cpp" />
+    <ClCompile Include="cCommandGroup.cpp" />
+    <ClCompile Include="cEntity.cpp" />
+    <ClCompile Include="cEntityFactory.cpp" />
+    <ClCompile Include="cEntityFactoryImpl.cpp" />
+    <ClCompile Include="cFBO.cpp" />
+    <ClCompile Include="cFollowObjectCommand.cpp" />
+    <ClCompile Include="cGemStones.cpp" />
+    <ClCompile Include="cGLColourHelper.cpp" />
+    <ClCompile Include="cGLFWUtils.cpp" />
+    <ClCompile Include="cGoldCoins.cpp" />
+    <ClCompile Include="CHRTimer.cpp" />
+    <ClCompile Include="cIsland.cpp" />
+    <ClCompile Include="cJet.cpp" />
+    <ClCompile Include="cLight.cpp" />
+    <ClCompile Include="cLightHelper.cpp" />
+    <ClCompile Include="cLightsManager.cpp" />
+    <ClCompile Include="cLocationTriggerMoveOrient.cpp" />
+    <ClCompile Include="cLuaBrain.cpp" />
+    <ClCompile Include="cMazeMaker.cpp" />
+    <ClCompile Include="cMediator.cpp" />
+    <ClCompile Include="cMesh.cpp" />
+    <ClCompile Include="cMeshObject.cpp" />
+    <ClCompile Include="cMeshObjectFactory.cpp" />
+    <ClCompile Include="cModelDrawInfo.cpp" />
+    <ClCompile Include="cMoveToCommand.cpp" />
+    <ClCompile Include="cMoveToEaseWithTime.cpp" />
+    <ClCompile Include="cMoveToLookAt.cpp" />
+    <ClCompile Include="cNormalShip.cpp" />
+    <ClCompile Include="console.cpp" />
+    <ClCompile Include="cOrientToCommand.cpp" />
+    <ClCompile Include="cParticleEmitter.cpp" />
+    <ClCompile Include="cParticleManager.cpp" />
+    <ClCompile Include="cPhysics.cpp" />
+    <ClCompile Include="cPlayer.cpp" />
+    <ClCompile Include="CPlyFile5nt.cpp" />
+    <ClCompile Include="CPlyFile5nt_experimental.cpp" />
+    <ClCompile Include="CPlyFile5nt_planarUV.cpp" />
+    <ClCompile Include="cPort.cpp" />
+    <ClCompile Include="cRandomHelper.cpp" />
+    <ClCompile Include="cRandThreaded.cpp" />
+    <ClCompile Include="cSceneUtils.cpp" />
+    <ClCompile Include="cShader.cpp" />
+    <ClCompile Include="cShaderUtils.cpp" />
+    <ClCompile Include="cShip.cpp" />
+    <ClCompile Include="cSimpleAssimpSkinnedMeshLoader_OneMesh.cpp" />
+    <ClCompile Include="CStringHelper.cpp" />
+    <ClCompile Include="cSuperShip.cpp" />
+    <ClCompile Include="cTreasure.cpp" />
+    <ClCompile Include="cVAOMeshUtils.cpp" />
+    <ClCompile Include="CVector3f.cpp" />
+    <ClCompile Include="EvadeBehaviour.cpp" />
+    <ClCompile Include="FleeBehaviour.cpp" />
+    <ClCompile Include="Flock.cpp" />
+    <ClCompile Include="FormationBehaviour.cpp" />
+    <ClCompile Include="glad.c" />
+    <ClCompile Include="cJsonUtils.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="cUserIO.cpp" />
+    <ClCompile Include="cSoundManager.cpp" />
+    <ClCompile Include="PersueBehaviour.cpp" />
+    <ClCompile Include="PhysicsGlobal.cpp" />
+    <ClCompile Include="SeekBehaviour.cpp" />
+    <ClCompile Include="smoothstep_Wikipedia.cpp" />
+    <ClCompile Include="TextureManager\C24BitBMPpixel.cpp" />
+    <ClCompile Include="TextureManager\cBasicTextureManager.cpp" />
+    <ClCompile Include="TextureManager\CTextureFromBMP.cpp" />
+    <ClCompile Include="utils.cpp" />
+    <ClCompile Include="WanderAndIdleBehaviour.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ApproachBehaviour.h" />
+    <ClInclude Include="Behaviour.h" />
+    <ClInclude Include="BehaviourManager.h" />
+    <ClInclude Include="cAABB.h" />
+    <ClInclude Include="cAgent.h" />
+    <ClInclude Include="cAgentBufferManager.h" />
+    <ClInclude Include="cAgentManager.h" />
+    <ClInclude Include="cAgentThreaded.h" />
+    <ClInclude Include="cAnimationCurveCommand.h" />
+    <ClInclude Include="cAnimationState.h" />
+    <ClInclude Include="cAssimpBasic.h" />
+    <ClInclude Include="cAssimpBasic_Imp.h" />
+    <ClInclude Include="cBase.h" />
+    <ClInclude Include="cBehaviour.h" />
+    <ClInclude Include="cBird.h" />
+    <ClInclude Include="cBirdBufferManager.h" />
+    <ClInclude Include="cCamera.h" />
+    <ClInclude Include="cCannonBall.h" />
+    <ClInclude Include="cCommandGroup.h" />
+    <ClInclude Include="cEntity.h" />
+    <ClInclude Include="cEntityFactory.h" />
+    <ClInclude Include="cEntityFactoryImpl.h" />
+    <ClInclude Include="cFBO.h" />
+    <ClInclude Include="cFollowObjectCommand.h" />
+    <ClInclude Include="cGemStones.h" />
+    <ClInclude Include="cGLColourHelper.h" />
+    <ClInclude Include="cGLFWUtils.h" />
+    <ClInclude Include="cGoldCoins.h" />
+    <ClInclude Include="cCharacter.h" />
+    <ClInclude Include="CHRTimer.h" />
+    <ClInclude Include="cIsland.h" />
+    <ClInclude Include="cJet.h" />
+    <ClInclude Include="cLight.h" />
+    <ClInclude Include="cLightHelper.h" />
+    <ClInclude Include="cLightsManager.h" />
+    <ClInclude Include="cLocationTriggerMoveOrient.h" />
+    <ClInclude Include="cLuaBrain.h" />
+    <ClInclude Include="cMazeMaker.h" />
+    <ClInclude Include="cMediator.h" />
+    <ClInclude Include="cMesh.h" />
+    <ClInclude Include="cMeshObject.h" />
+    <ClInclude Include="cMeshObjectFactory.h" />
+    <ClInclude Include="cModelDrawInfo.h" />
+    <ClInclude Include="cMoveToCommand.h" />
+    <ClInclude Include="cMoveToEaseWithTime.h" />
+    <ClInclude Include="cMoveToLookAt.h" />
+    <ClInclude Include="cNormalShip.h" />
+    <ClInclude Include="console.h" />
+    <ClInclude Include="cOrientToCommand.h" />
+    <ClInclude Include="cParticleEmitter.h" />
+    <ClInclude Include="cParticleManager.h" />
+    <ClInclude Include="cPhysics.h" />
+    <ClInclude Include="cPlayer.h" />
+    <ClInclude Include="CPlyFile5nt.h" />
+    <ClInclude Include="CPlyInfo.h" />
+    <ClInclude Include="cPort.h" />
+    <ClInclude Include="cRandomHelper.h" />
+    <ClInclude Include="cRandThreaded.h" />
+    <ClInclude Include="cSceneUtils.h" />
+    <ClInclude Include="cShaderUtils.h" />
+    <ClInclude Include="cShip.h" />
+    <ClInclude Include="cSimpleAssimpSkinnedMeshLoader_OneMesh.h" />
+    <ClInclude Include="CStringHelper.h" />
+    <ClInclude Include="cSuperShip.h" />
+    <ClInclude Include="cTreasure.h" />
+    <ClInclude Include="cUserIO.h" />
+    <ClInclude Include="cVAOMeshUtils.h" />
+    <ClInclude Include="CVector3f.h" />
+    <ClInclude Include="EvadeBehaviour.h" />
+    <ClInclude Include="FleeBehaviour.h" />
+    <ClInclude Include="Flock.h" />
+    <ClInclude Include="FormationBehaviour.h" />
+    <ClInclude Include="iCommand.h" />
+    <ClInclude Include="iEntity.h" />
+    <ClInclude Include="iEquipment.h" />
+    <ClInclude Include="iMediatorEntity.h" />
+    <ClInclude Include="iMeshObject.h" />
+    <ClInclude Include="json.hpp" />
+    <ClInclude Include="cJsonUtils.h" />
+    <ClInclude Include="cSoundManager.h" />
+    <ClInclude Include="PersueBehaviour.h" />
+    <ClInclude Include="PhysicsGlobal.h" />
+    <ClInclude Include="SeekBehaviour.h" />
+    <ClInclude Include="smoothstep_Wikipedia.h" />
+    <ClInclude Include="sVertex_xyz_rgba_n_uv2_bt_4Bones.h" />
+    <ClInclude Include="TextureManager\C24BitBMPpixel.h" />
+    <ClInclude Include="TextureManager\cBasicTextureManager.h" />
+    <ClInclude Include="TextureManager\CTextureFromBMP.h" />
+    <ClInclude Include="utils.h" />
+    <ClInclude Include="WanderAndIdleBehaviour.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="AnimScript.lua" />
+    <None Include="assets\shaders\fragment01.glsl" />
+    <None Include="assets\shaders\vertex01.glsl" />
+    <None Include="physics_config.json" />
+    <None Include="savefile.json" />
+    <None Include="settings.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="oriWayPoints.txt" />
+    <Text Include="posWayPoints.txt" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

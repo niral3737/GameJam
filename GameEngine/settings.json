@@ -1,0 +1,148 @@
+{
+    "appleSound": "apple_bite",
+    "axeSound": "axe",
+    "backgroundSound1": "Fantascape",
+    "backgroundSound2": "Puzzle-Game",
+    "backgroundSound3": "Fantasy_Game_Background",
+    "cameraAt": {
+        "x": 187.17312622070313,
+        "y": 139.0080108642578,
+        "z": -333.8184814453125
+    },
+    "cameraEye": {
+        "x": 187.9796142578125,
+        "y": 139.2616729736328,
+        "z": -334.3526916503906
+    },
+    "compressedFileExt": ".mp3",
+    "fireSound": "fire",
+    "forestSound": "forest",
+    "fragmentShaderFileName": "fragment01.glsl",
+    "jumpSound": "jump",
+    "lights": [
+        {
+            "attenuation": {
+                "const": 0.0,
+                "distanceCutOff": 0.0,
+                "linear": 0.03157208487391472,
+                "quad": 9.999999747378752e-06
+            },
+            "diffuse": {
+                "a": 1.0,
+                "b": 1.0,
+                "g": 1.0,
+                "r": 1.0
+            },
+            "direction": {
+                "w": 0.0,
+                "x": 0.0,
+                "y": -1.0,
+                "z": 0.0
+            },
+            "friendlyName": "light1",
+            "param1": {
+                "innerAngle": 38.0,
+                "lightType": 2.0,
+                "outerAngle": 40.0,
+                "w": 0.0
+            },
+            "param2": {
+                "on": 0.0,
+                "w": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "position": {
+                "w": 1.0,
+                "x": -36.29999923706055,
+                "y": 75.0,
+                "z": 11.799999237060547
+            },
+            "specular": {
+                "a": 1.0,
+                "b": 1.0,
+                "g": 1.0,
+                "r": 1.0
+            },
+            "useDebugSphere": false
+        }
+    ],
+    "maxNumberOfLights": 10,
+    "meshFileNames": [
+        "sphereInvertedNormals.ply",
+        "sphere.ply",
+        "sphere3.ply",
+        "cueBall.ply",
+        "cube.ply",
+        "flatPlane.ply",
+        "plane_facing_negX.ply",
+        "1x1_2Tri_Quad_2_Sided_xyz_n_uv.ply",
+        "Room_2_Bigger_Doorways.ply",
+        "Room_2_Bigger_Triangulated.ply",
+        "eagle.ply",
+        "1x1_Star_1_Quad_2_Sided_xyz_n_uv.ply",
+        "1x1_Star_2_Quad_2_Sided_xyz_n_uv.ply",
+        "eagle10.ply",
+        "eagle50.ply"
+    ],
+    "textures": [
+        "Bumpy_Textured_Leaves_seamless.bmp",
+        "wall.bmp",
+        "grass.bmp"
+    ],
+    "textureBasePath": "assets/textures",
+    "meshes": [
+        {
+            "acceleration": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "dontLight": false,
+            "friendlyName": "terrain",
+            "isUpdatedByPhysics": false,
+            "isVisible": true,
+            "isWireFrame": false,
+            "materialDiffuse": {
+                "a": 1.0,
+                "b": 1.0,
+                "g": 1.0,
+                "r": 1.0
+            },
+            "materialSpecular": {
+                "b": 1.0,
+                "g": 1.0,
+                "power": 1.0,
+                "r": 1.0
+            },
+            "meshName": "terrain_xyz_n_uv.ply",
+            "position": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "postRotation": {
+                "x": 0.0,
+                "y": -0.0,
+                "z": 0.0
+            },
+            "scale": 1.0,
+            "useVertexColor": false,
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            }
+        }
+    ],
+    "punchSound": "punch",
+    "shaderBasePath": "assets/shaders/",
+    "shaderProgramName": "myShader",
+    "soundsBasePath": "./assets/sounds/",
+    "splashSound": "splash",
+    "uncompressedFileExt": ".wav",
+    "vertexShaderFileName": "vertex01.glsl",
+    "radio1": "https://stream.absolutradio.de/hot/mp3-128/radioplayer/",
+    "radio2": "http://us4.internet-radio.com:8266/stream",
+    "radio3": "http://198.58.98.83:8258/stream"
+}

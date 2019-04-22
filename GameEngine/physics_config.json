@@ -1,0 +1,78 @@
+{
+    "RigidBodyDefs": [
+        {
+            "ShapeType": "Plane",
+            "Mass": 0.0,
+            "Position": [ 150.0, 150.0, 0.0 ],
+            "Velocity": [ 0.0, 0.0, 0.0 ],
+            "Orientation": [ 0.0, 0.0, 0.0 ],
+            "PlaneNormal": [ -1.0, 0.0, 0.0 ],
+            "PlaneConstant": 1.0
+        },
+        {
+            "ShapeType": "Plane",
+            "Mass": 0.0,
+            "Position": [ 0.0, 150.0, 150.0 ],
+            "Velocity": [ 0.0, 0.0, 0.0 ],
+            "Orientation": [ 0.0, 0.0, 0.0 ],
+            "PlaneNormal": [ 0.0, 0.0, -1.0 ],
+            "PlaneConstant": 1.0
+        },
+        {
+            "ShapeType": "Plane",
+            "Mass": 0.0,
+            "Position": [ 0.0, 150.0, -150.0 ],
+            "Velocity": [ 0.0, 0.0, 0.0 ],
+            "Orientation": [ 0.0, 0.0, 0.0 ],
+            "PlaneNormal": [ 0.0, 0.0, 1.0 ],
+            "PlaneConstant": 1.0
+        },
+        {
+            "ShapeType": "Plane",
+            "Mass": 0.0,
+            "Position": [ -150.0, 150.0, 0.0 ],
+            "Velocity": [ 0.0, 0.0, 0.0 ],
+            "Orientation": [ 0.0, 0.0, 0.0 ],
+            "PlaneNormal": [ 1.0, 0.0, 0.0 ],
+            "PlaneConstant": 1.0
+        },
+        {
+            "ShapeType": "Plane",
+            "Mass": 0.0,
+            "Position": [ 0.0, 0.0, 0.0 ],
+            "Velocity": [ 0.0, 0.0, 0.0 ],
+            "Orientation": [ 0.0, 0.0, 0.0 ],
+            "PlaneNormal": [ 0.0, 1.0, 0.0 ],
+            "PlaneConstant": 1.0
+        }
+    ],
+    "ConstraintDefs": [
+        {
+            "Type": "DOF6",
+            "RBAIndex": 5,
+            "Degrees": [ 10.0, 0.0, 10.0 ]
+        },
+        {
+            "Type": "Hinge",
+            "RBAIndex": 10,
+            "PivotInA": [ 10.0, -10.0, -10.0 ],
+            "AxisInA": [ 0.0, 1.0, 0.0 ]
+        },
+        {
+            "Type": "POINT2POINT",
+            "RBAIndex": 7,
+            "RBBIndex": 8,
+            "PivotInA": [ -10.0, 5.0, -10.0 ],
+            "PivotInB": [ 10.0, 5.0, 10.0 ]
+        },
+        {
+            "Type": "SLIDER",
+            "RBAIndex": 9,
+            "RBBIndex": 12,
+            "UpperLinLimit": 40.0,
+            "LowerLinLimit":  25.0
+
+        }
+
+    ]
+}

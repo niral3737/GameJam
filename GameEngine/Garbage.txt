@@ -1,0 +1,396 @@
+/*cMediator* mediator = new cMediator();
+
+	cEquipmentFactory* equipmentFactory = new cEquipmentFactory(mediator);*/
+
+	//iEquipment* ball = equipmentFactory->createEquipment(1);
+	//mediator->LoadEquipment(ball);
+	//cMeshObject* ballMesh = (cMeshObject*) cSceneUtils::getInstance()->findObjectByFriendlyName("cueBall");
+	//ball->setMesh(ballMesh);
+
+	//cSceneUtils::getInstance()->vecEquipmentsToDraw.push_back(ball);
+
+//iEquipment* cueStick = equipmentFactory->createEquipment(2);
+	//mediator->LoadEquipment(cueStick);
+	//cMeshObject* cueMesh = (cMeshObject*)cSceneUtils::getInstance()->findObjectByFriendlyName("terrain");
+	//cueMesh->setDiffuseColour(glm::vec3(1.0f, 1.0f, 0.0f));
+	//cueMesh->isWireFrame = false;
+	//cueStick->setMesh(cueMesh);
+
+	//cSceneUtils::getInstance()->vecEquipmentsToDraw.push_back(cueStick);
+
+	//iEquipment* cueStick1 = equipmentFactory->createEquipment(2);
+	//mediator->LoadEquipment(cueStick1);
+	//cMeshObject* cueMesh1 = (cMeshObject*)cSceneUtils::getInstance()->findObjectByFriendlyName("ring");
+	//cueMesh1->setDiffuseColour(glm::vec3(1.0f, 1.0f, 0.0f));
+	//cueMesh1->isWireFrame = false;
+	//cueMesh1->scale = 0.01f;
+	//cueStick1->setMesh(cueMesh1);
+
+	//cSceneUtils::getInstance()->vecEquipmentsToDraw.push_back(cueStick1);
+
+	//iEquipment* cueStick2 = equipmentFactory->createEquipment(2);
+	//mediator->LoadEquipment(cueStick2);
+	//cMeshObject* cueMesh2 = (cMeshObject*)cSceneUtils::getInstance()->findObjectByFriendlyName("cueBall");
+	//cueMesh2->setDiffuseColour(glm::vec3(1.0f, 1.0f, 0.0f));
+	//cueMesh2->isWireFrame = false;
+	//cueStick2->setMesh(cueMesh2);
+
+	//cSceneUtils::getInstance()->vecEquipmentsToDraw.push_back(cueStick2);
+	//cMeshObject* cueMesh3 = (cMeshObject*)cSceneUtils::getInstance()->findObjectByFriendlyName("box");
+	//for (size_t i = 0; i < 30; i++)
+	//{
+	//	/*iEquipment* cueStick3 = equipmentFactory->createEquipment(2);
+	//	mediator->LoadEquipment(cueStick3);*/
+	//	cMeshObject* newObeject = cueMesh3->cloneObject();
+	//	float x = static_cast <float> (rand()) / static_cast <float> (RAND_MAX);
+	//	float z = static_cast <float> (rand()) / static_cast <float> (RAND_MAX);
+	//	newObeject->position = glm::vec3(x * 300.0f, -20.0f, z * 300.0f);
+	//	newObeject->setDiffuseColour(glm::vec3(1.0f, 0.0f, 0.0f));
+	//	newObeject->isWireFrame = false;
+	//	newObeject->isUpdatedByPhysics = true;
+	//	newObeject->velocity = glm::vec3(0.0f, 0.0f, 0.0f);
+	//	//cueStick3->setMesh(cueMesh3);
+
+	//	cSceneUtils::getInstance()->vecObjectsToDraw.push_back(newObeject);
+	//}
+	
+	
+	
+	
+	
+	
+	/***************************************************/
+	
+	
+	
+	
+	
+	
+	/*cMeshObject* sphereMesh = (cMeshObject*)cSceneUtils::getInstance()->findObjectByFriendlyName("sphere");
+	sphereMesh->isVisible = false;
+	const size_t NUMBER_OF_PORTS = 20;
+	for (size_t i = 0; i < NUMBER_OF_PORTS; i++)
+	{
+		cMeshObject* portMesh = sphereMesh->cloneObject();
+		portMesh->friendlyName = portMesh->friendlyName + std::to_string(i);
+		portMesh->isVisible = true;
+
+		cSceneUtils::getInstance()->vecObjectsToDraw.push_back(portMesh);
+	}*/
+	
+	
+	/***************************************************************/
+	
+	
+		cMeshObject* sphereMesh = (cMeshObject*)cSceneUtils::getInstance()->findObjectByFriendlyName("base");
+	sphereMesh->isVisible = false;
+	const size_t NUMBER_OF_BASES = 80;
+	for (size_t i = 0; i < NUMBER_OF_BASES; i++)
+	{
+		cMeshObject* portMesh = sphereMesh->cloneObject();
+		portMesh->friendlyName = portMesh->friendlyName + std::to_string(i);
+		portMesh->isVisible = true;
+
+		cSceneUtils::getInstance()->vecObjectsToDraw.push_back(portMesh);
+	}
+
+	cMeshObject* ballMesh = (cMeshObject*)cSceneUtils::getInstance()->findObjectByFriendlyName("cannonBall");
+	ballMesh->isVisible = false;
+	const size_t NUMBER_OF_CANNON_BALLS = 8;
+	for (size_t i = 0; i < NUMBER_OF_CANNON_BALLS; i++)
+	{
+		cMeshObject* portMesh = ballMesh->cloneObject();
+		portMesh->friendlyName = portMesh->friendlyName + std::to_string(i);
+		portMesh->isVisible = true;
+
+		cSceneUtils::getInstance()->vecObjectsToDraw.push_back(portMesh);
+	}
+	
+	/*****************************************************************/
+	/*
+	iEquipment* cueRack = equipmentFactory->createEquipment(3);
+	mediator->LoadEquipment(cueRack);
+	cMeshObject* cueRackMesh = (cMeshObject*)cSceneUtils::getInstance()->findObjectByFriendlyName("cueRack");
+	cueRack->setMesh(cueRackMesh);
+
+	cEquipmentBuilder* builder = new cEquipmentBuilder();
+	builder->buildEquipment(3, cueRack);
+
+	for (size_t i = 0; i < ((cCueRack*)cueRack)->cues.size(); i++)
+	{
+		((cCueRack*)cueRack)->cues[i]->setMesh((cMeshObject*)cSceneUtils::getInstance()->findObjectByFriendlyName("cue1"));
+	}*/
+	
+	/********************************************************/
+	
+	for (size_t i = 0; i < vecPorts.size(); i++)
+		{
+			cShip* ship = vecPorts[i]->ship;
+
+			if (ship->eShipState == DEAD)
+			{
+				continue;
+			}
+			
+			if (ship->eShipState == WAITING && ship->timeWaited < ship->timeToWait)
+			{
+				ship->timeWaited += SPEED_PER_TICK;
+				continue;
+			}
+			else
+			{
+				ship->eShipState = GOING;
+				vecPorts[i]->isShipDocked = false;
+				// change as per the ship
+				ship->timeToWait = SPEED_PER_TICK * cRandomHelper::generateRandomIntInRange(100, 200);
+				//<alterations
+				if (ship->isSuperShip)
+				{
+					ship->timeToWait = SPEED_PER_TICK * cRandomHelper::generateRandomIntInRange(150, 300);
+				}
+				//alterations>
+				ship->timeWaited = 0.0f;
+			}
+
+			unsigned int waitingTimeInDistance = cRandomHelper::generateRandomIntInRange(100, 200);
+			
+
+			float deltaX = vecPorts[ship->portToGoIndex]->getMesh()->position.x - ship->getMesh()->position.x;
+			float deltaZ = vecPorts[ship->portToGoIndex]->getMesh()->position.z - ship->getMesh()->position.z;
+			float distance = glm::distance(vecPorts[ship->portToGoIndex]->getMesh()->position
+				, ship->getMesh()->position);
+
+			if (distance > SPEED_PER_TICK)
+			{
+				float ratio = SPEED_PER_TICK / distance;
+				ship->getMesh()->position.x += (ratio * deltaX);
+				ship->getMesh()->position.z += (ratio * deltaZ);
+			}
+			else
+			{
+				//reached the desired port
+				ship->getMesh()->position.x = vecPorts[ship->portToGoIndex]->getMesh()->position.x;
+				ship->getMesh()->position.z = vecPorts[ship->portToGoIndex]->getMesh()->position.z;
+
+				if(ship->portToGoIndex != i)
+				{
+					ship->eShipState = ATTACKING;
+				}
+				else
+				{
+					ship->eShipState = WAITING;
+				}
+				
+				if (ship->eShipState == ATTACKING)
+				{
+					//attacking logic
+					if (vecPorts[ship->portToGoIndex]->isShipDocked)
+					{
+						//ship is there
+						ship->attackPortWithShip(vecPorts[ship->portToGoIndex]->getName());
+					}
+					else
+					{
+						//no ship at the port
+						ship->attackEmptyPort(vecPorts[ship->portToGoIndex]->getName());
+					}
+					//<alteration
+					// check if it can be a superShip after an attack
+					if (vecPorts[i]->treasureGold->numberOfTreasure > 100)
+					{
+						unsigned int oneForthChanceNum = cRandomHelper::generateRandomIntInRange(0, 3);
+						if (oneForthChanceNum == 0)
+						{
+							ship->upgradeToSuperShip();
+						}
+					}
+
+					if (vecPorts[ship->portToGoIndex]->treasureGold->numberOfTreasure > 100)
+					{
+						unsigned int oneForthChanceNum = cRandomHelper::generateRandomIntInRange(0, 3);
+						if (oneForthChanceNum == 0)
+						{
+							vecPorts[ship->portToGoIndex]->ship->upgradeToSuperShip();
+						}
+					}
+
+					if (vecPorts[i]->treasureGold->numberOfTreasure <= 0)
+					{
+						vecPorts[i]->convertGemStonesToGold();
+
+						if(vecPorts[i]->treasureGold->numberOfTreasure <= 0){
+							//no gold on port, must die
+							vecPorts[i]->getMesh()->setDiffuseColour(glm::vec3(1.0f, 0.0f, 0.0f));
+							vecPorts[i]->ship->getMesh()->setDiffuseColour(glm::vec3(1.0f, 0.0f, 0.0f));
+							vecPorts[i]->ship->eShipState = DEAD;
+							continue;
+						}
+						
+					}
+
+					//if (vecPorts[ship->portToGoIndex]->treasureGold->numberOfTreasure <= 0)
+					//{
+					//	vecPorts[ship->portToGoIndex]->convertGemStonesToGold();
+
+					//	if (vecPorts[ship->portToGoIndex]->treasureGold->numberOfTreasure <= 0)
+					//	{
+					//		//no gold on port, must die
+					//		//ship->getMesh()->setDiffuseColour(glm::vec3(1.0f, 0.0f, 0.0f));
+					//		vecPorts[ship->portToGoIndex]->getMesh()->setDiffuseColour(glm::vec3(1.0f, 0.0f, 0.0f));
+					//		vecPorts[ship->portToGoIndex]->ship->getMesh()->setDiffuseColour(glm::vec3(1.0f, 0.0f, 0.0f));
+					//		vecPorts[ship->portToGoIndex]->ship->eShipState = DEAD;
+					//		continue;
+					//	}
+					//}
+					//alteration>
+
+					//go home
+					ship->eShipState = GOING;
+					ship->portToGoIndex = i;
+				}
+
+				//TODO do something about float comparision use distance maybe
+				//if (ship->portToGoIndex == i && ship->getMesh()->position == vecPorts[i]->getMesh()->position)
+				if(ship->eShipState == WAITING)
+				{
+					//reached home
+					ship->eShipState = WAITING;
+					vecPorts[i]->isShipDocked = true;
+					//spend gold waiting
+					ship->spendGoldWaiting();
+					//if (vecPorts[i]->treasureGold->numberOfTreasure <= 0)
+					//{
+					//	//no gold on port, must die
+					//	//ship->getMesh()->setDiffuseColour(glm::vec3(1.0f, 0.0f, 0.0f));
+					//	vecPorts[i]->getMesh()->setDiffuseColour(glm::vec3(1.0f, 0.0f, 0.0f));
+					//	vecPorts[i]->ship->getMesh()->setDiffuseColour(glm::vec3(1.0f, 0.0f, 0.0f));
+					//	vecPorts[i]->ship->eShipState = DEAD;
+
+					//	continue;
+					//}
+					if (vecPorts[i]->treasureGold->numberOfTreasure <= 0)
+					{
+						vecPorts[i]->convertGemStonesToGold();
+
+						if (vecPorts[i]->treasureGold->numberOfTreasure <= 0)
+						{
+							//no gold on port, must die
+							//ship->getMesh()->setDiffuseColour(glm::vec3(1.0f, 0.0f, 0.0f));
+							vecPorts[i]->getMesh()->setDiffuseColour(glm::vec3(1.0f, 0.0f, 0.0f));
+							vecPorts[i]->ship->getMesh()->setDiffuseColour(glm::vec3(1.0f, 0.0f, 0.0f));
+							vecPorts[i]->ship->eShipState = DEAD;
+							continue;
+						}
+					}
+					
+					//find a port that's not dead
+					size_t portToGoIndex = cRandomHelper::generateRandomIntInRange(0, NUMBER_OF_PORTS - 1);
+					while (portToGoIndex == i || vecPorts[portToGoIndex]->ship->eShipState == DEAD)
+					{
+						portToGoIndex = cRandomHelper::generateRandomIntInRange(0, NUMBER_OF_PORTS - 1);
+					}
+					ship->portToGoIndex = portToGoIndex;
+				}
+
+
+			}
+
+		}
+		
+		
+		/**********************************************/
+		//randomly distribute 2000 gold coins
+	int goldCoins = 2000;
+	while (goldCoins > 0)
+	{
+		unsigned int coins = cRandomHelper::generateRandomIntInRange(2, 10);
+		unsigned int portIndex = cRandomHelper::generateRandomIntInRange(0, NUMBER_OF_PORTS - 1);
+
+		if (goldCoins - coins < 0)
+		{
+			vecPorts[portIndex]->treasureGold->addTreasure(goldCoins);
+		}else{
+			vecPorts[portIndex]->treasureGold->addTreasure(coins);
+		}
+		goldCoins -= coins;
+	}
+
+	int gemStones = 200;
+	while (gemStones > 0)
+	{
+		unsigned int stones = cRandomHelper::generateRandomIntInRange(2, 10);
+		unsigned int portIndex = cRandomHelper::generateRandomIntInRange(0, NUMBER_OF_PORTS - 1);
+
+		if (gemStones - stones < 0)
+		{
+			vecPorts[portIndex]->treasureGold->addTreasure(gemStones);
+		}
+		else
+		{
+			vecPorts[portIndex]->treasureGold->addTreasure(stones);
+		}
+		gemStones -= stones;
+	}
+	
+	
+	/***********************************************/
+	const size_t NUMBER_OF_PORTS = 20;
+	std::vector<cPort*> vecPorts;
+
+	//<alterations
+	//initially port0 has superShip
+	cPort* port0 = (cPort*)entityFactory->createEntity("port");
+	mediator->LoadEntity(port0);
+	port0->setMesh(sceneUtils->findObjectByFriendlyName("port" + std::to_string(0)));
+
+	port0->ship = (cShip*)entityFactory->createEntity("superShip");
+	port0->ship->ownPortName = port0->getName();
+	port0->ship->setMesh(sceneUtils->findObjectByFriendlyName("ship" + std::to_string(0)));
+	port0->ship->getMesh()->setDiffuseColour(glm::vec3(1.0f, 1.0f, 0.0f));
+	mediator->LoadEntity(port0->ship);
+	port0->treasureGold = (cTreasure*) entityFactory->createEntity("goldCoins");
+	port0->treasureGemStones = (cTreasure*)entityFactory->createEntity("gemStones");
+	//extra 100 gold coins
+	port0->treasureGold->addTreasure(100);
+
+	vecPorts.push_back(port0);
+	//alterations>
+
+	for (size_t i = 1; i < NUMBER_OF_PORTS; i++)
+	{
+		cPort* port = (cPort*) entityFactory->createEntity("port");
+		mediator->LoadEntity(port);
+		port->setMesh(sceneUtils->findObjectByFriendlyName("port" + std::to_string(i)));
+
+		port->ship = (cShip*) entityFactory->createEntity("normalShip");
+		port->ship->ownPortName = port->getName();
+		port->ship->setMesh(sceneUtils->findObjectByFriendlyName("ship" + std::to_string(i)));
+		port->ship->getMesh()->setDiffuseColour(glm::vec3(0.0f, 1.0f, 0.0f));
+		mediator->LoadEntity(port->ship);
+		port->treasureGold = (cTreasure*) entityFactory->createEntity("goldCoins");
+		//<alterations
+		port->treasureGemStones = (cTreasure*)entityFactory->createEntity("gemStones");
+		//alterations>
+		vecPorts.push_back(port);
+	}
+	
+	/***********************************************/
+		const float SPEED_PER_TICK = 4.0f;
+
+	for (size_t i = 0; i < vecPorts.size(); i++)
+	{
+		vecPorts[i]->isShipDocked = true;
+		cShip* ship = vecPorts[i]->ship;
+		ship->portToGoIndex = cRandomHelper::generateRandomIntInRange(0, NUMBER_OF_PORTS - 1);
+		ship->timeToWait = SPEED_PER_TICK * cRandomHelper::generateRandomIntInRange(100, 200);
+		
+		//<alterations
+		if (vecPorts[i]->ship->isSuperShip)
+		{
+			ship->timeToWait = SPEED_PER_TICK * cRandomHelper::generateRandomIntInRange(150, 300);
+		}
+		//alterations>
+
+		//initial state is waiting
+		ship->eShipState = WAITING;
+	}

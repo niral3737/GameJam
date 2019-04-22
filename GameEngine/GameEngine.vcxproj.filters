@@ -1,0 +1,637 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Shader">
+      <UniqueIdentifier>{f7813ca0-2a64-4a7f-aee8-3a9da031f3da}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Json">
+      <UniqueIdentifier>{50c09dea-b095-4069-811a-557422269021}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GLFW">
+      <UniqueIdentifier>{d02d18fd-f38e-428c-a46e-1120a7bc980c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UserIO">
+      <UniqueIdentifier>{78697ad4-b3fb-406e-a59c-a6c20379710b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Glad">
+      <UniqueIdentifier>{fc71cb77-e5ac-4c1f-8f7c-be26152571c9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="VAOMesh">
+      <UniqueIdentifier>{6439534a-848b-4b0c-94ca-4aa7efac993d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Model">
+      <UniqueIdentifier>{b8e72a30-4a80-4e3f-9e52-6ee8afe346b5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scene">
+      <UniqueIdentifier>{b330c768-3890-46c5-9e87-4cd5d2b1a392}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sound">
+      <UniqueIdentifier>{9a1f29b7-d4e2-420c-ac4f-0aa804bba876}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shader\shaders">
+      <UniqueIdentifier>{f47a1599-7f70-4093-91d7-9db56ea49059}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Lights">
+      <UniqueIdentifier>{90983057-7f7c-4a2a-ab2a-3834129e0ea4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utils">
+      <UniqueIdentifier>{299b0e80-d4e3-4ebd-a716-f4b95dcacd9c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Physics">
+      <UniqueIdentifier>{b601b307-a0ea-4ab1-a7e9-2dd51cae23d1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TextureManager">
+      <UniqueIdentifier>{f933f27f-bd31-4908-9af9-ffbe05d5e098}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scripting">
+      <UniqueIdentifier>{107d9956-163d-475a-bf6f-0ab8fe1a84d7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scripting\Commands">
+      <UniqueIdentifier>{88fb32d4-db16-4b0c-b653-d0919aa60d3f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Behaviour">
+      <UniqueIdentifier>{0bba2371-51ae-4bdc-aee5-6d983b56186e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AssimpFBX">
+      <UniqueIdentifier>{a8f217a4-4c76-4e71-9610-d0274ee11fee}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="PlyLoader">
+      <UniqueIdentifier>{c73b1728-4e65-4004-9d24-37950ef79b01}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AnimationCharacter">
+      <UniqueIdentifier>{99eef5ac-5b7d-42a3-9d6c-ddb17845a973}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Load">
+      <UniqueIdentifier>{fb96a859-89c0-463a-a94e-90bf0e187aec}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="FBO">
+      <UniqueIdentifier>{8d23f595-56d6-423d-8f1b-cd2aeb670bc1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Flocking">
+      <UniqueIdentifier>{db7e729a-2989-458d-8d54-abcaea2f9d13}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Particle">
+      <UniqueIdentifier>{28b9ec36-c9a1-4001-a0c6-28feafff8760}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Threading">
+      <UniqueIdentifier>{3dd0596f-ee01-4f17-a39b-b6f9f72356f3}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="cShaderUtils.cpp">
+      <Filter>Shader</Filter>
+    </ClCompile>
+    <ClCompile Include="cShader.cpp">
+      <Filter>Shader</Filter>
+    </ClCompile>
+    <ClCompile Include="cJsonUtils.cpp">
+      <Filter>Json</Filter>
+    </ClCompile>
+    <ClCompile Include="cGLFWUtils.cpp">
+      <Filter>GLFW</Filter>
+    </ClCompile>
+    <ClCompile Include="cUserIO.cpp">
+      <Filter>UserIO</Filter>
+    </ClCompile>
+    <ClCompile Include="glad.c">
+      <Filter>Glad</Filter>
+    </ClCompile>
+    <ClCompile Include="cVAOMeshUtils.cpp">
+      <Filter>VAOMesh</Filter>
+    </ClCompile>
+    <ClCompile Include="cModelDrawInfo.cpp">
+      <Filter>VAOMesh</Filter>
+    </ClCompile>
+    <ClCompile Include="cMeshObject.cpp">
+      <Filter>Model</Filter>
+    </ClCompile>
+    <ClCompile Include="cMeshObjectFactory.cpp">
+      <Filter>Model</Filter>
+    </ClCompile>
+    <ClCompile Include="cSceneUtils.cpp">
+      <Filter>Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="console.cpp">
+      <Filter>Sound</Filter>
+    </ClCompile>
+    <ClCompile Include="utils.cpp">
+      <Filter>Sound</Filter>
+    </ClCompile>
+    <ClCompile Include="cSoundManager.cpp">
+      <Filter>Sound</Filter>
+    </ClCompile>
+    <ClCompile Include="cLightsManager.cpp">
+      <Filter>Lights</Filter>
+    </ClCompile>
+    <ClCompile Include="cLight.cpp">
+      <Filter>Lights</Filter>
+    </ClCompile>
+    <ClCompile Include="cLightHelper.cpp">
+      <Filter>Lights</Filter>
+    </ClCompile>
+    <ClCompile Include="cGLColourHelper.cpp">
+      <Filter>Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="cPhysics.cpp">
+      <Filter>Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="cMediator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="cCamera.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="cRandomHelper.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="cShip.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="cNormalShip.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="cTreasure.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="cGoldCoins.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="cGemStones.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="cPort.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="cEntityFactory.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="cEntityFactoryImpl.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="cSuperShip.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="cIsland.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="cBase.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="cCannonBall.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="cAABB.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="cCommandGroup.cpp">
+      <Filter>Scripting</Filter>
+    </ClCompile>
+    <ClCompile Include="cMoveToCommand.cpp">
+      <Filter>Scripting\Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="cFollowObjectCommand.cpp">
+      <Filter>Scripting\Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="smoothstep_Wikipedia.cpp">
+      <Filter>Scripting</Filter>
+    </ClCompile>
+    <ClCompile Include="cJet.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="cLuaBrain.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="cOrientToCommand.cpp">
+      <Filter>Scripting\Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="cAnimationCurveCommand.cpp">
+      <Filter>Scripting\Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="cMoveToEaseWithTime.cpp">
+      <Filter>Scripting\Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="cMoveToLookAt.cpp">
+      <Filter>Scripting\Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="cLocationTriggerMoveOrient.cpp">
+      <Filter>Scripting\Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="cPlayer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SeekBehaviour.cpp">
+      <Filter>Behaviour</Filter>
+    </ClCompile>
+    <ClCompile Include="BehaviourManager.cpp">
+      <Filter>Behaviour</Filter>
+    </ClCompile>
+    <ClCompile Include="cAgent.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FleeBehaviour.cpp">
+      <Filter>Behaviour</Filter>
+    </ClCompile>
+    <ClCompile Include="PersueBehaviour.cpp">
+      <Filter>Behaviour</Filter>
+    </ClCompile>
+    <ClCompile Include="EvadeBehaviour.cpp">
+      <Filter>Behaviour</Filter>
+    </ClCompile>
+    <ClCompile Include="ApproachBehaviour.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="WanderAndIdleBehaviour.cpp">
+      <Filter>Behaviour</Filter>
+    </ClCompile>
+    <ClCompile Include="cAnimationState.cpp">
+      <Filter>AssimpFBX</Filter>
+    </ClCompile>
+    <ClCompile Include="cAssimpBasic.cpp">
+      <Filter>AssimpFBX</Filter>
+    </ClCompile>
+    <ClCompile Include="cAssimpBasic_Imp.cpp">
+      <Filter>AssimpFBX</Filter>
+    </ClCompile>
+    <ClCompile Include="cSimpleAssimpSkinnedMeshLoader_OneMesh.cpp">
+      <Filter>AssimpFBX</Filter>
+    </ClCompile>
+    <ClCompile Include="cMesh.cpp">
+      <Filter>Model</Filter>
+    </ClCompile>
+    <ClCompile Include="CHRTimer.cpp">
+      <Filter>PlyLoader</Filter>
+    </ClCompile>
+    <ClCompile Include="CPlyFile5nt.cpp">
+      <Filter>PlyLoader</Filter>
+    </ClCompile>
+    <ClCompile Include="CPlyFile5nt_experimental.cpp">
+      <Filter>PlyLoader</Filter>
+    </ClCompile>
+    <ClCompile Include="CPlyFile5nt_planarUV.cpp">
+      <Filter>PlyLoader</Filter>
+    </ClCompile>
+    <ClCompile Include="CStringHelper.cpp">
+      <Filter>PlyLoader</Filter>
+    </ClCompile>
+    <ClCompile Include="CVector3f.cpp">
+      <Filter>PlyLoader</Filter>
+    </ClCompile>
+    <ClCompile Include="cMazeMaker.cpp">
+      <Filter>Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="cCharacter.cpp">
+      <Filter>AnimationCharacter</Filter>
+    </ClCompile>
+    <ClCompile Include="PhysicsGlobal.cpp">
+      <Filter>Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="cFBO.cpp">
+      <Filter>FBO</Filter>
+    </ClCompile>
+    <ClCompile Include="TextureManager\C24BitBMPpixel.cpp">
+      <Filter>TextureManager</Filter>
+    </ClCompile>
+    <ClCompile Include="TextureManager\cBasicTextureManager.cpp">
+      <Filter>TextureManager</Filter>
+    </ClCompile>
+    <ClCompile Include="TextureManager\CTextureFromBMP.cpp">
+      <Filter>TextureManager</Filter>
+    </ClCompile>
+    <ClCompile Include="Flock.cpp">
+      <Filter>Flocking</Filter>
+    </ClCompile>
+    <ClCompile Include="cEntity.cpp">
+      <Filter>Flocking</Filter>
+    </ClCompile>
+    <ClCompile Include="cBirdBufferManager.cpp">
+      <Filter>Flocking</Filter>
+    </ClCompile>
+    <ClCompile Include="cRandThreaded.cpp">
+      <Filter>Flocking</Filter>
+    </ClCompile>
+    <ClCompile Include="cBird.cpp">
+      <Filter>Flocking</Filter>
+    </ClCompile>
+    <ClCompile Include="FormationBehaviour.cpp">
+      <Filter>Flocking</Filter>
+    </ClCompile>
+    <ClCompile Include="cParticleEmitter.cpp">
+      <Filter>Particle</Filter>
+    </ClCompile>
+    <ClCompile Include="cParticleManager.cpp">
+      <Filter>Particle</Filter>
+    </ClCompile>
+    <ClCompile Include="cAgentBufferManager.cpp">
+      <Filter>Threading</Filter>
+    </ClCompile>
+    <ClCompile Include="cAgentThreaded.cpp">
+      <Filter>Threading</Filter>
+    </ClCompile>
+    <ClCompile Include="cAgentManager.cpp">
+      <Filter>Threading</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="cShaderUtils.h">
+      <Filter>Shader</Filter>
+    </ClInclude>
+    <ClInclude Include="json.hpp">
+      <Filter>Json</Filter>
+    </ClInclude>
+    <ClInclude Include="cJsonUtils.h">
+      <Filter>Json</Filter>
+    </ClInclude>
+    <ClInclude Include="cGLFWUtils.h">
+      <Filter>GLFW</Filter>
+    </ClInclude>
+    <ClInclude Include="cUserIO.h">
+      <Filter>UserIO</Filter>
+    </ClInclude>
+    <ClInclude Include="cVAOMeshUtils.h">
+      <Filter>VAOMesh</Filter>
+    </ClInclude>
+    <ClInclude Include="cModelDrawInfo.h">
+      <Filter>VAOMesh</Filter>
+    </ClInclude>
+    <ClInclude Include="cSceneUtils.h">
+      <Filter>Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="iMeshObject.h">
+      <Filter>Model</Filter>
+    </ClInclude>
+    <ClInclude Include="cMeshObjectFactory.h">
+      <Filter>Model</Filter>
+    </ClInclude>
+    <ClInclude Include="cMeshObject.h">
+      <Filter>Model</Filter>
+    </ClInclude>
+    <ClInclude Include="console.h">
+      <Filter>Sound</Filter>
+    </ClInclude>
+    <ClInclude Include="utils.h">
+      <Filter>Sound</Filter>
+    </ClInclude>
+    <ClInclude Include="cSoundManager.h">
+      <Filter>Sound</Filter>
+    </ClInclude>
+    <ClInclude Include="cLightsManager.h">
+      <Filter>Lights</Filter>
+    </ClInclude>
+    <ClInclude Include="cLight.h">
+      <Filter>Lights</Filter>
+    </ClInclude>
+    <ClInclude Include="cLightHelper.h">
+      <Filter>Lights</Filter>
+    </ClInclude>
+    <ClInclude Include="cGLColourHelper.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="cPhysics.h">
+      <Filter>Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="iEquipment.h">
+      <Filter>Model</Filter>
+    </ClInclude>
+    <ClInclude Include="cMediator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="cCamera.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="iEntity.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="cRandomHelper.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="cShip.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="cNormalShip.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="cTreasure.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="cGoldCoins.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="cGemStones.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="cPort.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="cEntityFactory.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="cEntityFactoryImpl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="iMediatorEntity.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="cSuperShip.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="cIsland.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="cBase.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="cCannonBall.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="cAABB.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="iCommand.h">
+      <Filter>Scripting</Filter>
+    </ClInclude>
+    <ClInclude Include="cCommandGroup.h">
+      <Filter>Scripting</Filter>
+    </ClInclude>
+    <ClInclude Include="cMoveToCommand.h">
+      <Filter>Scripting\Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="cFollowObjectCommand.h">
+      <Filter>Scripting\Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="smoothstep_Wikipedia.h">
+      <Filter>Scripting</Filter>
+    </ClInclude>
+    <ClInclude Include="cJet.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="cLuaBrain.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="cOrientToCommand.h">
+      <Filter>Scripting\Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="cAnimationCurveCommand.h">
+      <Filter>Scripting\Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="cMoveToEaseWithTime.h">
+      <Filter>Scripting\Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="cMoveToLookAt.h">
+      <Filter>Scripting\Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="cLocationTriggerMoveOrient.h">
+      <Filter>Scripting\Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="cPlayer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Behaviour.h">
+      <Filter>Behaviour</Filter>
+    </ClInclude>
+    <ClInclude Include="BehaviourManager.h">
+      <Filter>Behaviour</Filter>
+    </ClInclude>
+    <ClInclude Include="SeekBehaviour.h">
+      <Filter>Behaviour</Filter>
+    </ClInclude>
+    <ClInclude Include="cAgent.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FleeBehaviour.h">
+      <Filter>Behaviour</Filter>
+    </ClInclude>
+    <ClInclude Include="PersueBehaviour.h">
+      <Filter>Behaviour</Filter>
+    </ClInclude>
+    <ClInclude Include="EvadeBehaviour.h">
+      <Filter>Behaviour</Filter>
+    </ClInclude>
+    <ClInclude Include="ApproachBehaviour.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="WanderAndIdleBehaviour.h">
+      <Filter>Behaviour</Filter>
+    </ClInclude>
+    <ClInclude Include="cAnimationState.h">
+      <Filter>AssimpFBX</Filter>
+    </ClInclude>
+    <ClInclude Include="cAssimpBasic.h">
+      <Filter>AssimpFBX</Filter>
+    </ClInclude>
+    <ClInclude Include="cAssimpBasic_Imp.h">
+      <Filter>AssimpFBX</Filter>
+    </ClInclude>
+    <ClInclude Include="cSimpleAssimpSkinnedMeshLoader_OneMesh.h">
+      <Filter>AssimpFBX</Filter>
+    </ClInclude>
+    <ClInclude Include="cMesh.h">
+      <Filter>Model</Filter>
+    </ClInclude>
+    <ClInclude Include="sVertex_xyz_rgba_n_uv2_bt_4Bones.h">
+      <Filter>VAOMesh</Filter>
+    </ClInclude>
+    <ClInclude Include="CHRTimer.h">
+      <Filter>PlyLoader</Filter>
+    </ClInclude>
+    <ClInclude Include="CPlyFile5nt.h">
+      <Filter>PlyLoader</Filter>
+    </ClInclude>
+    <ClInclude Include="CPlyInfo.h">
+      <Filter>PlyLoader</Filter>
+    </ClInclude>
+    <ClInclude Include="CStringHelper.h">
+      <Filter>PlyLoader</Filter>
+    </ClInclude>
+    <ClInclude Include="CVector3f.h">
+      <Filter>PlyLoader</Filter>
+    </ClInclude>
+    <ClInclude Include="cMazeMaker.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="cCharacter.h">
+      <Filter>AnimationCharacter</Filter>
+    </ClInclude>
+    <ClInclude Include="PhysicsGlobal.h">
+      <Filter>Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="cFBO.h">
+      <Filter>FBO</Filter>
+    </ClInclude>
+    <ClInclude Include="TextureManager\C24BitBMPpixel.h">
+      <Filter>TextureManager</Filter>
+    </ClInclude>
+    <ClInclude Include="TextureManager\cBasicTextureManager.h">
+      <Filter>TextureManager</Filter>
+    </ClInclude>
+    <ClInclude Include="TextureManager\CTextureFromBMP.h">
+      <Filter>TextureManager</Filter>
+    </ClInclude>
+    <ClInclude Include="Flock.h">
+      <Filter>Flocking</Filter>
+    </ClInclude>
+    <ClInclude Include="cEntity.h">
+      <Filter>Flocking</Filter>
+    </ClInclude>
+    <ClInclude Include="cBirdBufferManager.h">
+      <Filter>Flocking</Filter>
+    </ClInclude>
+    <ClInclude Include="cBird.h">
+      <Filter>Flocking</Filter>
+    </ClInclude>
+    <ClInclude Include="cRandThreaded.h">
+      <Filter>Flocking</Filter>
+    </ClInclude>
+    <ClInclude Include="FormationBehaviour.h">
+      <Filter>Flocking</Filter>
+    </ClInclude>
+    <ClInclude Include="cParticleEmitter.h">
+      <Filter>Particle</Filter>
+    </ClInclude>
+    <ClInclude Include="cParticleManager.h">
+      <Filter>Particle</Filter>
+    </ClInclude>
+    <ClInclude Include="cAgentThreaded.h">
+      <Filter>Threading</Filter>
+    </ClInclude>
+    <ClInclude Include="cAgentBufferManager.h">
+      <Filter>Threading</Filter>
+    </ClInclude>
+    <ClInclude Include="cAgentManager.h">
+      <Filter>Threading</Filter>
+    </ClInclude>
+    <ClInclude Include="cBehaviour.h">
+      <Filter>Threading</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="settings.json" />
+    <None Include="assets\shaders\fragment01.glsl">
+      <Filter>Shader\shaders</Filter>
+    </None>
+    <None Include="assets\shaders\vertex01.glsl">
+      <Filter>Shader\shaders</Filter>
+    </None>
+    <None Include="savefile.json" />
+    <None Include="AnimScript.lua" />
+    <None Include="physics_config.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="oriWayPoints.txt" />
+    <Text Include="posWayPoints.txt" />
+  </ItemGroup>
+</Project>
