@@ -66,27 +66,32 @@ void cUserIO::key_callback(GLFWwindow * window, int key, int scancode, int actio
 	{
 		sceneUtils->selectedCharacter->isRunning = false;
 		sceneUtils->selectedCharacter->mesh->currentAnimation = "Idle";
+		sceneUtils->selectedCharacter->stop();
 	}
 	if (key == GLFW_KEY_DOWN && action == GLFW_RELEASE)
 	{
 		sceneUtils->selectedCharacter->isRunning = false;
 		sceneUtils->selectedCharacter->mesh->currentAnimation = "Idle";
+		sceneUtils->selectedCharacter->stop();
 	}
 	if (key == GLFW_KEY_LEFT && action == GLFW_RELEASE)
 	{
 		sceneUtils->selectedCharacter->isRunning = false;
 		sceneUtils->selectedCharacter->mesh->currentAnimation = "Idle";
+		sceneUtils->selectedCharacter->stop();
 	}
 	if (key == GLFW_KEY_RIGHT && action == GLFW_RELEASE)
 	{
 		sceneUtils->selectedCharacter->isRunning = false;
 		sceneUtils->selectedCharacter->mesh->currentAnimation = "Idle";
+		sceneUtils->selectedCharacter->stop();
 	}
 	if ((key == GLFW_KEY_LEFT_CONTROL && action == GLFW_RELEASE)
 		|| (key == GLFW_KEY_RIGHT_CONTROL && action == GLFW_RELEASE))
 	{
 		sceneUtils->selectedCharacter->isRunning = false;
 		sceneUtils->selectedCharacter->mesh->currentAnimation = "Idle";
+		sceneUtils->selectedCharacter->stop();
 	}
 
 	//const float CHAR_MOVE_JUMP_SPEED = 10.0f;
@@ -322,10 +327,12 @@ void cUserIO::processAsynKeys(GLFWwindow* window)
 		if (glfwGetKey(window, GLFW_KEY_RIGHT) == GLFW_PRESS)
 		{
 			sceneUtils->selectedCharacter->mesh->adjustOrientationEulerAngles(0.0f, -1.5f, 0.0f, true);
+			sceneUtils->selectedCharacter->stop();
 		}
 		if (glfwGetKey(window, GLFW_KEY_LEFT) == GLFW_PRESS)
 		{
 			sceneUtils->selectedCharacter->mesh->adjustOrientationEulerAngles(0.0f, 1.5f, 0.0f, true);
+			sceneUtils->selectedCharacter->stop();
 		}
 
 		/*if (glfwGetKey(window, GLFW_KEY_SPACE) == GLFW_PRESS)

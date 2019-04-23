@@ -87,7 +87,7 @@ int main(int argc, char** argv)
 	defPlane2.Mass = 0.0f;
 	defPlane2.Velocity = glm::vec3(0.0f);
 	defPlane2.Orientation = glm::vec3(0.0f);
-	defPlane2.Position = glm::vec3(10.0f, 150.0f, 0.0f);
+	defPlane2.Position = glm::vec3(30.0f, 150.0f, 0.0f);
 	defPlane2.PlaneNormal = glm::vec3(-1.0f, 0.0f, 0.0f);
 	defPlane2.PlaneConstant = 1.0f;
 	nPhysics::iShape* shapePlane2 = gPhysicsFactory->CreatePlaneShape(defPlane2.PlaneNormal, defPlane2.PlaneConstant);
@@ -152,17 +152,17 @@ int main(int argc, char** argv)
 	//player->scale = 1.0f;
 	player->currentAnimation = "Idle";
 	player->setOrientationEulerAngles(0.0f, 0.0f, 0.0f, false);
-	//player->rigidBody = rigidBodyChar1;
+	player->rigidBody = rigidBodyChar1;
 
 
 	//plane->rigidBody = rigidBodyPlane2;
 
 
 	nPhysics::iPhysicsWorld* physicsWorld = gPhysicsFactory->CreatePhysicsWorld();
-	//physicsWorld->AddBody(rigidBodyChar1);
-	//physicsWorld->AddBody(rigidBodyPlane1);
+	physicsWorld->AddBody(rigidBodyChar1);
+	physicsWorld->AddBody(rigidBodyPlane1);
 	//physicsWorld->AddBody(rigidBodyPlane2);
-	//physicsWorld->SetGravity(glm::vec3(0.0f));
+	physicsWorld->SetGravity(glm::vec3(0.0f, -9.8f, 0.0f));
 	//sceneUtils->placePlayer();
 	camera->lookAt(player->position);
 
@@ -284,13 +284,8 @@ int main(int argc, char** argv)
 	agentManager->start();
 
 	//!behaviours
-	//toon
-
-	//sceneUtils->cartoonize(true);
-	//!toon
 	while (!glfwWindowShouldClose(window))
 	{
-
 		agentManager->seekAgent->updateTargetPos(character2->mesh->position);
 		agentManager->seekAgent->updateTargetOri(character2->mesh->getOrientation());
 

@@ -687,6 +687,13 @@ void cSceneUtils::applyTranformations(iMeshObject* pCurrentMesh, glm::mat4x4& ma
 		glm::mat4 matRotation = glm::mat4(rotation);
 
 		matModel = matModel * matRotation;
+
+		if (currentMesh->friendlyName == "SM_Object")
+		{
+			glm::vec4 pos = matModel[3];
+			pos.y -= 10.0f;
+			matModel[3] = pos;
+		}
 	}
 	else
 	{

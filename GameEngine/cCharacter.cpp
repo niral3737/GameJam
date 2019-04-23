@@ -51,16 +51,27 @@ void cCharacter::goInDir(float amount)
 	glm::mat4 matRotation = glm::mat4(mesh->getOrientation());
 	glm::vec4 frontOfCharacter = glm::vec4(0.0f, 0.0f, 1.0f, 1.0f);
 	this->at = glm::normalize(matRotation * frontOfCharacter);
-	mesh->position += this->at * amount;
+	//mesh->position += this->at * amount;
 
 	//addToPosition(this->at * amount);
-	/*glm::vec3 position = mesh->rigidBody->GetPosition();
+	glm::vec3 position = mesh->rigidBody->GetPosition();
 	position += this->at * amount;
-	mesh->rigidBody->SetPosition(position);*/
+	mesh->rigidBody->SetPosition(position);
+	return;
 
-	/*glm::vec3 vel = mesh->rigidBody->GetVelocity();
-	vel += this->at * amount;
-	mesh->rigidBody->SetVelocity(vel);*/
+	if (mesh->friendlyName == "SM_Object")
+	{
+		glm::vec3 vel = mesh->rigidBody->GetVelocity();
+		if (glm::length(vel) <= 25.0f)
+		{
+			vel += this->at * amount;
+		}
+		mesh->rigidBody->SetVelocity(vel);
+	}
+	else
+	{
+		mesh->position += this->at * amount;
+	}
 }
 
 void cCharacter::strafe(float amount)
@@ -74,11 +85,19 @@ void cCharacter::strafe(float amount)
 	glm::mat4 matRotation = glm::mat4(mesh->getOrientation());
 	glm::vec4 rightOfCharacter = glm::vec4(-1.0f, 0.0f, 0.0f, 1.0f);
 	glm::vec3 right = glm::normalize(matRotation * rightOfCharacter);
-	mesh->position += right * amount;
+	//mesh->position += right * amount;
 	//addToPosition(right * amount);
-	//glm::vec3 position = mesh->rigidBody->GetPosition();
-	//position += right * amount;
-	//mesh->rigidBody->SetPosition(position);
+
+	if (mesh->friendlyName == "SM_Object")
+	{
+		glm::vec3 position = mesh->rigidBody->GetPosition();
+		position += right * amount;
+		mesh->rigidBody->SetPosition(position);
+	}
+	else
+	{
+		mesh->position += right * amount;
+	}
 }
 
 
@@ -91,5 +110,13 @@ void cCharacter::jump()
 void cCharacter::action()
 {
 	this->mesh->currentAnimation = "Action";
+}
+
+void cCharacter::stop()
+{
+	if (mesh->friendlyName == "SM_Object")
+	{
+		mesh->rigidBody->SetVelocity(glm::vec3(0.0f));
+	}
 }
 

@@ -15,6 +15,7 @@ public:
 	bool isRunning;
 	bool isJumping;
 	bool isColliding;
+	void stop();
 
 private:
 	glm::vec3 at;

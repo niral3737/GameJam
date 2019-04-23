@@ -5,14 +5,14 @@
     "backgroundSound2": "Puzzle-Game",
     "backgroundSound3": "Fantasy_Game_Background",
     "cameraAt": {
-        "x": 0.0,
-        "y": 40.24361038208008,
-        "z": -149.03457641601563
+        "x": 19.380504608154297,
+        "y": 38.97801208496094,
+        "z": -105.78413391113281
     },
     "cameraEye": {
-        "x": 0.0,
-        "y": 40.504302978515625,
-        "z": -150.0
+        "x": 19.35843276977539,
+        "y": 39.156829833984375,
+        "z": -106.76776885986328
     },
     "compressedFileExt": ".mp3",
     "fireSound": "fire",
@@ -116,7 +116,7 @@
             "attenuation": {
                 "const": 0.0,
                 "distanceCutOff": 0.0,
-                "linear": 7.170289039611816,
+                "linear": 6.753035545349121,
                 "quad": 0.02223009429872036
             },
             "diffuse": {
@@ -208,7 +208,7 @@
             "attenuation": {
                 "const": 0.0,
                 "distanceCutOff": 0.0,
-                "linear": 7.637068748474121,
+                "linear": 7.5479021072387695,
                 "quad": 0.005600024480372667
             },
             "diffuse": {
@@ -451,7 +451,13 @@
         "1x1_Star_1_Quad_2_Sided_xyz_n_uv.ply",
         "1x1_Star_2_Quad_2_Sided_xyz_n_uv.ply",
         "eagle10.ply",
-        "eagle50.ply"
+        "eagle50.ply",
+        "building1.ply",
+        "building2.ply",
+        "building3.ply",
+        "building4.ply",
+        "bridge.ply",
+        "house.ply"
     ],
     "meshes": [
         {
@@ -461,15 +467,15 @@
                 "z": 0.0
             },
             "dontLight": false,
-            "friendlyName": "terrain",
+            "friendlyName": "bridge",
             "isUpdatedByPhysics": false,
             "isVisible": true,
             "isWireFrame": false,
             "materialDiffuse": {
                 "a": 1.0,
-                "b": 1.0,
-                "g": 1.0,
-                "r": 1.0
+                "b": 0.7048555016517639,
+                "g": 0.7141331434249878,
+                "r": 0.8926663994789124
             },
             "materialSpecular": {
                 "b": 1.0,
@@ -477,18 +483,228 @@
                 "power": 1.0,
                 "r": 1.0
             },
-            "meshName": "terrain_xyz_n_uv.ply",
+            "meshName": "bridge.ply",
             "position": {
+                "x": 20.80022621154785,
+                "y": 0.0,
+                "z": 254.00222778320313
+            },
+            "postRotation": {
+                "x": -3.141592502593994,
+                "y": 1.5531232357025146,
+                "z": -3.141592502593994
+            },
+            "scale": 3.5034215450286865,
+            "useVertexColor": false,
+            "velocity": {
                 "x": 0.0,
                 "y": 0.0,
                 "z": 0.0
+            }
+        },
+        {
+            "acceleration": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "dontLight": false,
+            "friendlyName": "building4",
+            "isUpdatedByPhysics": false,
+            "isVisible": true,
+            "isWireFrame": false,
+            "materialDiffuse": {
+                "a": 1.0,
+                "b": 0.21277505159378052,
+                "g": 0.11334574222564697,
+                "r": 0.8187200427055359
+            },
+            "materialSpecular": {
+                "b": 1.0,
+                "g": 1.0,
+                "power": 1.0,
+                "r": 1.0
+            },
+            "meshName": "building4.ply",
+            "position": {
+                "x": -55.1998291015625,
+                "y": 0.0,
+                "z": 432.79949951171875
             },
             "postRotation": {
                 "x": 0.0,
                 "y": -0.0,
                 "z": 0.0
             },
-            "scale": 1.0,
+            "scale": 7.4630537033081055,
+            "useVertexColor": false,
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            }
+        },
+        {
+            "acceleration": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "dontLight": false,
+            "friendlyName": "building3",
+            "isUpdatedByPhysics": false,
+            "isVisible": true,
+            "isWireFrame": false,
+            "materialDiffuse": {
+                "a": 1.0,
+                "b": 0.24250008165836334,
+                "g": 0.4668111205101013,
+                "r": 0.6037476658821106
+            },
+            "materialSpecular": {
+                "b": 1.0,
+                "g": 1.0,
+                "power": 1.0,
+                "r": 1.0
+            },
+            "meshName": "building3.ply",
+            "position": {
+                "x": 122.40055847167969,
+                "y": 0.0,
+                "z": 96.0040283203125
+            },
+            "postRotation": {
+                "x": 0.0,
+                "y": -0.0,
+                "z": 0.0
+            },
+            "scale": 5.062710762023926,
+            "useVertexColor": false,
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            }
+        },
+        {
+            "acceleration": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "dontLight": false,
+            "friendlyName": "building2",
+            "isUpdatedByPhysics": false,
+            "isVisible": true,
+            "isWireFrame": false,
+            "materialDiffuse": {
+                "a": 1.0,
+                "b": 0.47944578528404236,
+                "g": 0.9096347093582153,
+                "r": 0.3427533805370331
+            },
+            "materialSpecular": {
+                "b": 1.0,
+                "g": 1.0,
+                "power": 1.0,
+                "r": 1.0
+            },
+            "meshName": "building2.ply",
+            "position": {
+                "x": -52.79981994628906,
+                "y": 0.0,
+                "z": 141.20394897460938
+            },
+            "postRotation": {
+                "x": 0.0,
+                "y": -0.0,
+                "z": 0.0
+            },
+            "scale": 6.960925579071045,
+            "useVertexColor": false,
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            }
+        },
+        {
+            "acceleration": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "dontLight": false,
+            "friendlyName": "building1",
+            "isUpdatedByPhysics": false,
+            "isVisible": true,
+            "isWireFrame": false,
+            "materialDiffuse": {
+                "a": 1.0,
+                "b": 0.23407696187496185,
+                "g": 0.461256742477417,
+                "r": 0.8012329339981079
+            },
+            "materialSpecular": {
+                "b": 1.0,
+                "g": 1.0,
+                "power": 1.0,
+                "r": 1.0
+            },
+            "meshName": "building1.ply",
+            "position": {
+                "x": 137.200439453125,
+                "y": 0.0,
+                "z": 638.8060302734375
+            },
+            "postRotation": {
+                "x": 0.0,
+                "y": -0.0,
+                "z": 0.0
+            },
+            "scale": 7.284610748291016,
+            "useVertexColor": false,
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            }
+        },
+        {
+            "acceleration": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "dontLight": false,
+            "friendlyName": "house",
+            "isUpdatedByPhysics": false,
+            "isVisible": true,
+            "isWireFrame": false,
+            "materialDiffuse": {
+                "a": 1.0,
+                "b": 0.8414868712425232,
+                "g": 0.17087313532829285,
+                "r": 0.3427533805370331
+            },
+            "materialSpecular": {
+                "b": 1.0,
+                "g": 1.0,
+                "power": 1.0,
+                "r": 1.0
+            },
+            "meshName": "house.ply",
+            "position": {
+                "x": 187.19920349121094,
+                "y": 10.399998664855957,
+                "z": 394.40008544921875
+            },
+            "postRotation": {
+                "x": -3.141592502593994,
+                "y": 1.518359661102295,
+                "z": -3.141592502593994
+            },
+            "scale": 0.5526838898658752,
             "useVertexColor": false,
             "velocity": {
                 "x": 0.0,
@@ -803,9 +1019,9 @@
             },
             "meshName": "sphereInvertedNormals.ply",
             "position": {
-                "x": 0.0,
-                "y": 40.504302978515625,
-                "z": -150.0
+                "x": 19.35843276977539,
+                "y": 39.156829833984375,
+                "z": -106.76776885986328
             },
             "postRotation": {
                 "x": 0.0,
@@ -847,14 +1063,14 @@
             "position": {
                 "x": -500.0,
                 "y": 0.0,
-                "z": -500.0
+                "z": -60.00541687011719
             },
             "postRotation": {
                 "x": 0.0,
                 "y": -0.0,
                 "z": 0.0
             },
-            "scale": 1000.0,
+            "scale": 1.0,
             "textures": [
                 {
                     "name": "grass.bmp",

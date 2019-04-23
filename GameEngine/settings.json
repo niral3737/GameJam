@@ -83,7 +83,13 @@
         "1x1_Star_1_Quad_2_Sided_xyz_n_uv.ply",
         "1x1_Star_2_Quad_2_Sided_xyz_n_uv.ply",
         "eagle10.ply",
-        "eagle50.ply"
+        "eagle50.ply",
+        "building1.ply",
+        "building2.ply",
+        "building3.ply",
+        "building4.ply",
+        "bridge.ply",
+        "house.ply"
     ],
     "textures": [
         "Bumpy_Textured_Leaves_seamless.bmp",
