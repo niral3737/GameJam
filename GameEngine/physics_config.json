@@ -1,49 +1,44 @@
 {
     "RigidBodyDefs": [
         {
-            "ShapeType": "Plane",
+            "ShapeType": "Box",
             "Mass": 0.0,
-            "Position": [ 150.0, 150.0, 0.0 ],
+            "Position": [ 187.19, 0.0, 394.40 ],
             "Velocity": [ 0.0, 0.0, 0.0 ],
             "Orientation": [ 0.0, 0.0, 0.0 ],
-            "PlaneNormal": [ -1.0, 0.0, 0.0 ],
-            "PlaneConstant": 1.0
+            "HalfExtents": [ 98.81, 80.0, 120.0 ]
         },
         {
-            "ShapeType": "Plane",
+            "ShapeType": "Box",
             "Mass": 0.0,
-            "Position": [ 0.0, 150.0, 150.0 ],
+            "Position": [ 137.200439453125, 0.0, 638.8060302734375 ],
             "Velocity": [ 0.0, 0.0, 0.0 ],
             "Orientation": [ 0.0, 0.0, 0.0 ],
-            "PlaneNormal": [ 0.0, 0.0, -1.0 ],
-            "PlaneConstant": 1.0
+            "HalfExtents": [ 45.5, 66.97, 84 ]
         },
         {
-            "ShapeType": "Plane",
+            "ShapeType": "Box",
             "Mass": 0.0,
-            "Position": [ 0.0, 150.0, -150.0 ],
+            "Position": [ -52.79981994628906, 0.0, 141.20394897460938 ],
             "Velocity": [ 0.0, 0.0, 0.0 ],
             "Orientation": [ 0.0, 0.0, 0.0 ],
-            "PlaneNormal": [ 0.0, 0.0, 1.0 ],
-            "PlaneConstant": 1.0
+            "HalfExtents": [ 35.5, 76.5, 80.0 ]
         },
         {
-            "ShapeType": "Plane",
+            "ShapeType": "Box",
             "Mass": 0.0,
-            "Position": [ -150.0, 150.0, 0.0 ],
+            "Position": [ 122.40055847167969, 0.0, 96.0040283203125 ],
             "Velocity": [ 0.0, 0.0, 0.0 ],
             "Orientation": [ 0.0, 0.0, 0.0 ],
-            "PlaneNormal": [ 1.0, 0.0, 0.0 ],
-            "PlaneConstant": 1.0
+            "HalfExtents": [ 31.5, 73.5, 58.0 ]
         },
         {
-            "ShapeType": "Plane",
+            "ShapeType": "Box",
             "Mass": 0.0,
-            "Position": [ 0.0, 0.0, 0.0 ],
+            "Position": [ -55.1998291015625, 0.0, 432.79949951171875 ],
             "Velocity": [ 0.0, 0.0, 0.0 ],
             "Orientation": [ 0.0, 0.0, 0.0 ],
-            "PlaneNormal": [ 0.0, 1.0, 0.0 ],
-            "PlaneConstant": 1.0
+            "HalfExtents": [ 47.0, 256.5, 86.5 ]
         }
     ],
     "ConstraintDefs": [

@@ -22,7 +22,7 @@ void cParticleManager::setUpParticleEmitters()
 		// Will fade to fully transparent in the last 1 second of "life"
 		particleParams.deathTransparencyFadeTimeSeconds = 2.0f;
 
-		particleParams.position = glm::vec3(0.0f, 0.0f, 0.0f);
+		particleParams.position = glm::vec3(-30.0f, 0.0f, 235.0f);
 		particleParams.minInitialVelocity = glm::vec3(-0.5, 0.5, -0.5);
 		particleParams.maxInitialVelocity = glm::vec3(0.5, 1.0, 0.5);
 		particleParams.acceleration = glm::vec3(0.0f, 1.0f, 0.0f);
@@ -42,6 +42,36 @@ void cParticleManager::setUpParticleEmitters()
 		pPE_Smoke_01->Init(particleParams);
 
 		mapParticleEmitters["Smoke01"] = pPE_Smoke_01;
+	}
+	{
+		cParticleEmitter* pPE_Smoke_01 = new cParticleEmitter();
+		cParticleEmitter::sParticleCreationParams particleParams;
+		particleParams.totalNumberOfParticles = 500;	// Max # of particles ALIVE at ONE TIME
+		particleParams.minLifeTime = 0.2f;
+		particleParams.maxLifeTime = 1.2f;
+		// Will fade to fully transparent in the last 1 second of "life"
+		particleParams.deathTransparencyFadeTimeSeconds = 0.0f;
+
+		particleParams.position = glm::vec3(100.0f, 0.0f, 200.0f);
+		particleParams.minInitialVelocity = glm::vec3(-10.0f, 0.5f, -10.0f);
+		particleParams.maxInitialVelocity = glm::vec3(10.0f, 1.0f, 10.0f);
+		particleParams.acceleration = glm::vec3(0.0f, 1.0f, 0.0f);
+		particleParams.minNumberNewParticles = 6;
+		particleParams.maxNumberNewParticles = 10;
+		particleParams.minTimeBetweenParticleGenerationSeconds = 0.1f;
+		particleParams.maxTimeBetweenParticleGenerationSeconds = 0.2f;
+		particleParams.minInitialScale = 0.01f;
+		particleParams.maxInitialScale = 0.015f;
+		particleParams.minScaleChange = 0.0f;
+		particleParams.maxScaleChange = 0.1f;	// This is per frame change
+
+		// Degrees per frame
+		particleParams.minOrientationChangeAngleEuler = glm::vec3(-0.25f, -0.25f, -0.25f);
+		particleParams.maxOrientationChangeAngleEuler = glm::vec3(+0.25f, +0.25f, +0.25f);
+
+		pPE_Smoke_01->Init(particleParams);
+
+		mapParticleEmitters["Spark01"] = pPE_Smoke_01;
 	}
 }
 
@@ -105,7 +135,7 @@ void cParticleManager::updateAndDrawParticles(double deltaTime, GLuint shaderPro
 			}
 		}
 		//			std::cout << "Drew " << count << " particles" << std::endl;
-		pParticleMesh->isVisible = true;
+		pParticleMesh->isVisible = false;
 		pParticleMesh->position = oldPosition;
 		pParticleMesh->setOrientation(oldOrientation);
 		pParticleMesh->scale = oldScale;
@@ -114,6 +144,68 @@ void cParticleManager::updateAndDrawParticles(double deltaTime, GLuint shaderPro
 		// ***************************************************************************
 	}
 	// ENDOF: Star shaped smoke particle
+	itPE_Smoke01 = mapParticleEmitters.begin();
+	itPE_Smoke01
+		= mapParticleEmitters.find("Spark01");
+
+	if (itPE_Smoke01 != mapParticleEmitters.end())
+	{
+
+		cParticleEmitter* pPE_Smoke01 = itPE_Smoke01->second;
+
+		// Update the particle emitter
+		cMeshObject* pParticleMesh = (cMeshObject*)cSceneUtils::getInstance()->findObjectByFriendlyName("SmokeObjectStar");
+		glm::mat4 matParticleIndentity = glm::mat4(1.0f);
+		glm::vec3 oldPosition = pParticleMesh->position;
+		glm::quat oldOrientation = pParticleMesh->getOrientation();
+		float oldScale = pParticleMesh->scale;
+
+		pParticleMesh->setOrientationEulerAngles(0.0f, 0.0f, 0.0f);
+		pParticleMesh->isVisible = true;
+		//pParticleMesh->dontLight = true;
+		pParticleMesh->setDiffuseColour(glm::vec3(1.0f, 0.0f, 0.0f));
+
+
+		// Set up the shader
+		glUniform1f(bIsParticleImposter_UniLoc, (float)GL_TRUE);
+
+
+		pPE_Smoke01->Update(deltaTime);
+
+		std::vector<sParticle> vecParticlesToDraw;
+		pPE_Smoke01->getAliveParticles(vecParticlesToDraw);
+
+		pPE_Smoke01->sortParticlesBackToFront(vecParticlesToDraw, cameraEye);
+
+		unsigned int numParticles = (unsigned int)vecParticlesToDraw.size();
+		//			std::cout << "Drawing " << numParticles << " particles" << std::end;
+
+		unsigned int count = 0;
+		for (unsigned int index = 0; index != numParticles; index++)
+		{
+			if (vecParticlesToDraw[index].lifeRemaining > 0.0f)
+			{
+				// Draw it
+				pParticleMesh->position = vecParticlesToDraw[index].position;
+				pParticleMesh->scale = vecParticlesToDraw[index].scale;
+				pParticleMesh->setOrientation(vecParticlesToDraw[index].qOrientation);
+
+				// This is for the "death" transparency
+				glUniform1f(ParticleImposterAlphaOverride_UniLoc, vecParticlesToDraw[index].transparency);
+
+				cSceneUtils::getInstance()->drawObject(pParticleMesh, matParticleIndentity, shaderProgramID);
+				count++;
+			}
+		}
+		//			std::cout << "Drew " << count << " particles" << std::endl;
+		pParticleMesh->isVisible = false;
+		pParticleMesh->position = oldPosition;
+		pParticleMesh->setOrientation(oldOrientation);
+		pParticleMesh->scale = oldScale;
+		glUniform1f(bIsParticleImposter_UniLoc, (float)GL_FALSE);
+		//glUniform1f(ParticleImposterAlphaOverride_UniLoc, 1.0f);
+		// ***************************************************************************
+	}
 }
 
 void cParticleManager::reset(std::string name)

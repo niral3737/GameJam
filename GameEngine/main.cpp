@@ -62,7 +62,7 @@ int main(int argc, char** argv)
 	SetUpPhysics();
 	nPhysics::sRigidBodyDef defChar1;
 	defChar1.ShapeType = "Cylinder";
-	defChar1.Mass = 10.0f;
+	defChar1.Mass = 1.0f;
 	defChar1.Velocity = glm::vec3(0.0f);
 	defChar1.Orientation = glm::vec3(0.0f);
 	defChar1.HalfExtents = glm::vec3(7.8f, 10.0f, 7.8f);
@@ -164,12 +164,12 @@ int main(int argc, char** argv)
 	//physicsWorld->AddBody(rigidBodyPlane2);
 	physicsWorld->SetGravity(glm::vec3(0.0f, -9.8f, 0.0f));
 	//sceneUtils->placePlayer();
-	camera->lookAt(player->position);
+	//camera->lookAt(player->position);
 
 	//physics
 	for (size_t i = 0; i < gRigidBodies.size(); i++)
 	{
-		//physicsWorld->AddBody(gRigidBodies[i]);
+		physicsWorld->AddBody(gRigidBodies[i]);
 	}
 	//physics
 	cCharacter* character1 = new cCharacter();
@@ -251,7 +251,8 @@ int main(int argc, char** argv)
 	cParticleManager* particleManeger = new cParticleManager();
 	particleManeger->loadUniformLocations(program);
 	particleManeger->setUpParticleEmitters();
-	//particleManeger->reset("Smoke01");
+	particleManeger->reset("Smoke01");
+	particleManeger->reset("Spark01");
 	//!particle manager
 	//behaviours
 	eagle->isVisible = true;
@@ -277,7 +278,7 @@ int main(int argc, char** argv)
 
 	agentManager->wanderAgent->updateTargetPos(character2->mesh->position);
 	agentManager->wanderAgent->updateTargetOri(character2->mesh->getOrientation());
-	agentManager->wanderAgent->currentLocationToGo = glm::vec3(100.0f, 0.0f, 100.0f);
+	agentManager->wanderAgent->currentLocationToGo = glm::vec3(70.0f, 0.0f, 100.0f);
 	agentManager->wanderAgent->initPosBuffer(NPC3->position);
 	agentManager->wanderAgent->initOriBuffer(NPC3->getOrientation());
 

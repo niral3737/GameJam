@@ -1,6 +1,7 @@
 #include "cCharacter.h"
 #include <process.h>
 #include <Windows.h>
+#include "cCamera.h"
 
 cCharacter::cCharacter()
 {
@@ -54,11 +55,11 @@ void cCharacter::goInDir(float amount)
 	//mesh->position += this->at * amount;
 
 	//addToPosition(this->at * amount);
-	glm::vec3 position = mesh->rigidBody->GetPosition();
-	position += this->at * amount;
-	mesh->rigidBody->SetPosition(position);
-	return;
-
+	//glm::vec3 position = mesh->rigidBody->GetPosition();
+	//position += this->at * amount;
+	//mesh->rigidBody->SetPosition(position);
+	//return;
+	glm::vec3 playerPos;
 	if (mesh->friendlyName == "SM_Object")
 	{
 		glm::vec3 vel = mesh->rigidBody->GetVelocity();
@@ -67,11 +68,19 @@ void cCharacter::goInDir(float amount)
 			vel += this->at * amount;
 		}
 		mesh->rigidBody->SetVelocity(vel);
+		playerPos = mesh->rigidBody->GetPosition();
 	}
 	else
 	{
 		mesh->position += this->at * amount;
+		playerPos = mesh->position;
 	}
+
+	cCamera::getInstance()->eye = playerPos;
+	cCamera::getInstance()->eye.y += 50.0f;
+	cCamera::getInstance()->eye.z -= 120.0f;
+	playerPos.y += 30.0f;
+	cCamera::getInstance()->lookAt(playerPos);
 }
 
 void cCharacter::strafe(float amount)

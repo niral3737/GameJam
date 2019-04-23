@@ -134,10 +134,10 @@ void cAgentThreaded::Update(void)
 	{
 		if (behaviourType == WANDER)
 		{
-			float x =  this->m_pRandThread->getNextRandDouble() * 200.0f;
-			float z =  this->m_pRandThread->getNextRandDouble() * 200.0f;
+			//float x =  this->m_pRandThread->getNextRandDouble() * 200.0f;
+			float z =  this->m_pRandThread->getNextRandDouble() * 500.0f;
 
-			this->currentLocationToGo = glm::vec3(x, 0.0f, z);
+			this->currentLocationToGo = glm::vec3(70.0f, 0.0f, z);
 		}
 		addDeltaVel(glm::vec3(0.0f));
 		if (looking)

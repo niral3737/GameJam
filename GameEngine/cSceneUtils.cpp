@@ -152,9 +152,9 @@ void cSceneUtils::loadModelsIntoScene()
 		if (meshes[i].find("lodMeshes") != meshes[i].end())
 		{
 			std::vector<std::string> lodMeshes = meshes[i]["lodMeshes"].get<std::vector<std::string>>();
-			meshObject->vecLODMeshs.push_back(sLODInfo(lodMeshes[0], 1000.0f));
-			meshObject->vecLODMeshs.push_back(sLODInfo(lodMeshes[1], 200.0f));
-			meshObject->vecLODMeshs.push_back(sLODInfo(lodMeshes[2], 100.0f));
+			meshObject->vecLODMeshs.push_back(sLODInfo(lodMeshes[0], 2000.0f));
+			meshObject->vecLODMeshs.push_back(sLODInfo(lodMeshes[1], 800.0f));
+			meshObject->vecLODMeshs.push_back(sLODInfo(lodMeshes[2], 300.0f));
 		}
 
 
@@ -1627,6 +1627,20 @@ void cSceneUtils::selectNextCharacter()
 		selectedCharacterIndex++;
 	}
 	selectedCharacter = characters[selectedCharacterIndex];
+	glm::vec3 playerPos;
+	if (selectedCharacter->mesh->friendlyName == "SM_Object")
+	{
+		playerPos = selectedCharacter->mesh->rigidBody->GetPosition();
+	}
+	else
+	{
+		playerPos = selectedCharacter->mesh->position;
+	}
+	cCamera::getInstance()->eye = playerPos;
+	cCamera::getInstance()->eye.y += 50.0f;
+	cCamera::getInstance()->eye.z -= 120.0f;
+	playerPos.y += 30.0f;
+	cCamera::getInstance()->lookAt(playerPos);
 }
 
 void cSceneUtils::cartoonize()

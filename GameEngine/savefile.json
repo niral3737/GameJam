@@ -453,11 +453,21 @@
         "eagle10.ply",
         "eagle50.ply",
         "building1.ply",
+        "building110.ply",
+        "building150.ply",
         "building2.ply",
+        "building210.ply",
+        "building250.ply",
         "building3.ply",
+        "building310.ply",
+        "building350.ply",
         "building4.ply",
+        "building410.ply",
+        "building450.ply",
         "bridge.ply",
-        "house.ply"
+        "house.ply",
+        "house10.ply",
+        "house50.ply"
     ],
     "meshes": [
         {
@@ -469,7 +479,7 @@
             "dontLight": false,
             "friendlyName": "bridge",
             "isUpdatedByPhysics": false,
-            "isVisible": true,
+            "isVisible": false,
             "isWireFrame": false,
             "materialDiffuse": {
                 "a": 1.0,
@@ -526,6 +536,11 @@
                 "r": 1.0
             },
             "meshName": "building4.ply",
+            "lodMeshes": [
+                "building410.ply",
+                "building450.ply",
+                "building4.ply"
+            ],
             "position": {
                 "x": -55.1998291015625,
                 "y": 0.0,
@@ -536,7 +551,7 @@
                 "y": -0.0,
                 "z": 0.0
             },
-            "scale": 7.4630537033081055,
+            "scale": 1.0,
             "useVertexColor": false,
             "velocity": {
                 "x": 0.0,
@@ -568,6 +583,11 @@
                 "r": 1.0
             },
             "meshName": "building3.ply",
+            "lodMeshes": [
+                "building310.ply",
+                "building350.ply",
+                "building3.ply"
+            ],
             "position": {
                 "x": 122.40055847167969,
                 "y": 0.0,
@@ -578,7 +598,7 @@
                 "y": -0.0,
                 "z": 0.0
             },
-            "scale": 5.062710762023926,
+            "scale": 1.0,
             "useVertexColor": false,
             "velocity": {
                 "x": 0.0,
@@ -610,6 +630,11 @@
                 "r": 1.0
             },
             "meshName": "building2.ply",
+            "lodMeshes": [
+                "building210.ply",
+                "building250.ply",
+                "building2.ply"
+            ],
             "position": {
                 "x": -52.79981994628906,
                 "y": 0.0,
@@ -620,7 +645,7 @@
                 "y": -0.0,
                 "z": 0.0
             },
-            "scale": 6.960925579071045,
+            "scale": 1.0,
             "useVertexColor": false,
             "velocity": {
                 "x": 0.0,
@@ -652,6 +677,11 @@
                 "r": 1.0
             },
             "meshName": "building1.ply",
+            "lodMeshes": [
+                "building110.ply",
+                "building150.ply",
+                "building1.ply"
+            ],
             "position": {
                 "x": 137.200439453125,
                 "y": 0.0,
@@ -662,7 +692,7 @@
                 "y": -0.0,
                 "z": 0.0
             },
-            "scale": 7.284610748291016,
+            "scale": 1.0,
             "useVertexColor": false,
             "velocity": {
                 "x": 0.0,
@@ -694,17 +724,22 @@
                 "r": 1.0
             },
             "meshName": "house.ply",
+            "lodMeshes": [
+                "house10.ply",
+                "house50.ply",
+                "house.ply"
+            ],
             "position": {
                 "x": 187.19920349121094,
                 "y": 10.399998664855957,
                 "z": 394.40008544921875
             },
             "postRotation": {
-                "x": -3.141592502593994,
-                "y": 1.518359661102295,
-                "z": -3.141592502593994
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
             },
-            "scale": 0.5526838898658752,
+            "scale": 1.0,
             "useVertexColor": false,
             "velocity": {
                 "x": 0.0,
