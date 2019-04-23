@@ -88,7 +88,16 @@
     "textures": [
         "Bumpy_Textured_Leaves_seamless.bmp",
         "wall.bmp",
-        "grass.bmp"
+        "grass.bmp",
+        "reticle.bmp",
+        "Smoke_1.bmp",
+        "Plasma_Ring.bmp"
+    ],
+    "texturesHigh": [
+        "High_Bumpy_Textured_Leaves_seamless.bmp",
+        "High_wall.bmp",
+        "High_grass.bmp",
+        "High_reticle.bmp"
     ],
     "textureBasePath": "assets/textures",
     "meshes": [

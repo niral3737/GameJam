@@ -155,16 +155,8 @@ int main(int argc, char** argv)
 	//player->rigidBody = rigidBodyChar1;
 
 
-	std::vector<cMeshObject*> balls;
-	balls.push_back((cMeshObject*)sceneUtils->findObjectByFriendlyName("Ball"));
-	balls.push_back((cMeshObject*)sceneUtils->findObjectByFriendlyName("Ball2"));
-	balls.push_back((cMeshObject*)sceneUtils->findObjectByFriendlyName("Ball3"));
-	balls.push_back((cMeshObject*)sceneUtils->findObjectByFriendlyName("Ball4"));
-	balls.push_back((cMeshObject*)sceneUtils->findObjectByFriendlyName("Ball5"));
 	//plane->rigidBody = rigidBodyPlane2;
 
-	cMeshObject* ball2 = (cMeshObject*)sceneUtils->findObjectByFriendlyName("Ball2");
-	ball2->isReflective = true;
 
 	nPhysics::iPhysicsWorld* physicsWorld = gPhysicsFactory->CreatePhysicsWorld();
 	//physicsWorld->AddBody(rigidBodyChar1);
@@ -259,7 +251,7 @@ int main(int argc, char** argv)
 	cParticleManager* particleManeger = new cParticleManager();
 	particleManeger->loadUniformLocations(program);
 	particleManeger->setUpParticleEmitters();
-	particleManeger->reset("Smoke01");
+	//particleManeger->reset("Smoke01");
 	//!particle manager
 	//behaviours
 	eagle->isVisible = true;
@@ -292,6 +284,10 @@ int main(int argc, char** argv)
 	agentManager->start();
 
 	//!behaviours
+	//toon
+
+	//sceneUtils->cartoonize(true);
+	//!toon
 	while (!glfwWindowShouldClose(window))
 	{
 
@@ -669,23 +665,6 @@ int main(int argc, char** argv)
 			sceneUtils->shouldUpdate = false;
 			sceneUtils->selectedCharacter->isJumping = false;
 			sceneUtils->selectedCharacter->mesh->currentAnimation = "Idle";
-		}
-		int ctr = 0;
-		for (size_t i = 0; i < balls.size(); i++)
-		{
-			if (glm::distance(balls[i]->position, sceneUtils->selectedCharacter->mesh->position) <= 8.0f)
-			{
-				std::cout << "collide" << std::endl;
-				sceneUtils->selectedCharacter->isColliding = true;
-			}
-			else
-			{
-				ctr++;
-			}
-		}
-		if (ctr == balls.size())
-		{
-			sceneUtils->selectedCharacter->isColliding = false;
 		}
 		//Flocking Integration
 		//flock->CalculateSteering();

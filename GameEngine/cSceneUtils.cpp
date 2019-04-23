@@ -48,6 +48,7 @@ cSceneUtils::cSceneUtils()
 	this->blur = false;
 	this->drawReticle = false;
 	this->stencil = false;
+	this->toon = false;
 }
 
 cSceneUtils::~cSceneUtils()
@@ -1619,4 +1620,27 @@ void cSceneUtils::selectNextCharacter()
 		selectedCharacterIndex++;
 	}
 	selectedCharacter = characters[selectedCharacterIndex];
+}
+
+void cSceneUtils::cartoonize()
+{
+	
+		for (size_t i = 0; i < vecObjectsToDraw.size(); i++)
+		{
+			if (this->toon)
+			{
+				vecObjectsToDraw[i]->dontLight = true;
+				if (vecObjectsToDraw[i]->friendlyName == "ground")
+				{
+					continue;
+				}
+				vecObjectsToDraw[i]->toon = true;
+			}
+			else
+			{
+				vecObjectsToDraw[i]->dontLight = false;
+				vecObjectsToDraw[i]->toon = false;
+			}
+
+		}
 }

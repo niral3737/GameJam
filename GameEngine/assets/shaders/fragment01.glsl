@@ -279,6 +279,29 @@ void main()
 
 		finalOutputNormal.rgb = vertNormal.xyz;
 		finalOutputNormal.a = 1.0f;
+
+		if(toon){
+			vec3 viewVector = eyeLocation.xyz - vertPosWorld.xyz;
+			viewVector = normalize(viewVector);
+
+			vec3 pointNormal = normalize(vertNormal.xyz);
+			float angleDot = dot(viewVector, pointNormal);
+
+		//	if(angle >= -0.174533f && angle <= 0.174533f){
+			if(angleDot > 0.95){
+				finalOutputColour.rgb *= 0.95f; 
+			}
+			else if(angleDot > 0.5){
+				finalOutputColour.rgb *= 0.6f; 
+			}
+			else if(angleDot > 0.25){
+				finalOutputColour.rgb *= 0.15f; 
+			}
+			else {
+				finalOutputColour.rgb = vec3(0.0f, 0.0f, 0.0f);
+			}
+		}
+
 		return;
 	}
 

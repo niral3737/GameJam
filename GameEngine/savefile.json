@@ -5,13 +5,13 @@
     "backgroundSound2": "Puzzle-Game",
     "backgroundSound3": "Fantasy_Game_Background",
     "cameraAt": {
-        "x": 499.9801940917969,
-        "y": 426.24365234375,
-        "z": -753.3484497070313
+        "x": 0.0,
+        "y": 40.24361038208008,
+        "z": -149.03457641601563
     },
     "cameraEye": {
         "x": 0.0,
-        "y": 40.5043029785156,
+        "y": 40.504302978515625,
         "z": -150.0
     },
     "compressedFileExt": ".mp3",
@@ -116,7 +116,7 @@
             "attenuation": {
                 "const": 0.0,
                 "distanceCutOff": 0.0,
-                "linear": 6.4159440994262695,
+                "linear": 7.170289039611816,
                 "quad": 0.02223009429872036
             },
             "diffuse": {
@@ -208,7 +208,7 @@
             "attenuation": {
                 "const": 0.0,
                 "distanceCutOff": 0.0,
-                "linear": 5.7523322105407715,
+                "linear": 7.637068748474121,
                 "quad": 0.005600024480372667
             },
             "diffuse": {
@@ -461,6 +461,48 @@
                 "z": 0.0
             },
             "dontLight": false,
+            "friendlyName": "terrain",
+            "isUpdatedByPhysics": false,
+            "isVisible": true,
+            "isWireFrame": false,
+            "materialDiffuse": {
+                "a": 1.0,
+                "b": 1.0,
+                "g": 1.0,
+                "r": 1.0
+            },
+            "materialSpecular": {
+                "b": 1.0,
+                "g": 1.0,
+                "power": 1.0,
+                "r": 1.0
+            },
+            "meshName": "terrain_xyz_n_uv.ply",
+            "position": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "postRotation": {
+                "x": 0.0,
+                "y": -0.0,
+                "z": 0.0
+            },
+            "scale": 1.0,
+            "useVertexColor": false,
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            }
+        },
+        {
+            "acceleration": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "dontLight": false,
             "friendlyName": "PlasmaRingImposterObject",
             "isUpdatedByPhysics": false,
             "isVisible": true,
@@ -489,18 +531,18 @@
                 "z": 0.0
             },
             "scale": 1.0,
+            "textures": [
+                {
+                    "name": "Plasma_Ring.bmp",
+                    "strength": 1.0
+                }
+            ],
             "useVertexColor": false,
             "velocity": {
                 "x": 0.0,
                 "y": 0.0,
                 "z": 0.0
-            },
-            "textures": [
-                {
-                    "name": "Plasma_Ring.bmp",
-                    "strength":  1.0
-                }
-            ]
+            }
         },
         {
             "acceleration": {
@@ -537,18 +579,18 @@
                 "z": 0.0
             },
             "scale": 1.0,
-            "useVertexColor": false,
-            "velocity": {
-                "x": 0.0,
-                "y": 0.0,
-                "z": 0.0
-            },
             "textures": [
                 {
                     "name": "Smoke_1.bmp",
                     "strength": 1.0
                 }
-            ]
+            ],
+            "useVertexColor": false,
+            "velocity": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            }
         },
         {
             "acceleration": {
@@ -574,15 +616,10 @@
                 "r": 1.0
             },
             "meshName": "eagle.ply",
-            "lodMeshes": [
-                "eagle10.ply",
-                "eagle50.ply",
-                "eagle.ply"
-            ],
             "position": {
-                "x": 0.0,
-                "y": 80.0,
-                "z": 0.0
+                "x": 100.0,
+                "y": 10.0,
+                "z": 100.0
             },
             "postRotation": {
                 "x": 0.0,
@@ -632,18 +669,18 @@
                 "z": 0.0
             },
             "scale": 40.0,
+            "textures": [
+                {
+                    "name": "reticle.bmp",
+                    "strength": 0.20000000298023224
+                }
+            ],
             "useVertexColor": false,
             "velocity": {
                 "x": 0.0,
                 "y": 0.0,
                 "z": 0.0
-            },
-            "textures": [
-                {
-                    "name": "reticle.bmp",
-                    "strength": 0.2
-                }
-            ]
+            }
         },
         {
             "acceleration": {
@@ -680,18 +717,18 @@
                 "z": 0.0
             },
             "scale": 40.0,
+            "textures": [
+                {
+                    "name": "reticle.bmp",
+                    "strength": 0.20000000298023224
+                }
+            ],
             "useVertexColor": false,
             "velocity": {
                 "x": 0.0,
                 "y": 0.0,
                 "z": 0.0
-            },
-            "textures": [
-                {
-                    "name": "reticle.bmp",
-                    "strength": 0.2
-                }
-            ]
+            }
         },
         {
             "acceleration": {
@@ -728,18 +765,18 @@
                 "z": 0.0
             },
             "scale": 1.0,
+            "textures": [
+                {
+                    "name": "reticle.bmp",
+                    "strength": 0.20000000298023224
+                }
+            ],
             "useVertexColor": false,
             "velocity": {
                 "x": 0.0,
                 "y": 0.0,
                 "z": 0.0
-            },
-            "textures": [
-                {
-                    "name": "reticle.bmp",
-                    "strength": 0.2
-                }
-            ]
+            }
         },
         {
             "acceleration": {
@@ -766,9 +803,9 @@
             },
             "meshName": "sphereInvertedNormals.ply",
             "position": {
-                "x": 380.0,
-                "y": 10.0,
-                "z": 60.0
+                "x": 0.0,
+                "y": 40.504302978515625,
+                "z": -150.0
             },
             "postRotation": {
                 "x": 0.0,
@@ -790,237 +827,15 @@
                 "z": 0.0
             },
             "dontLight": false,
-            "friendlyName": "Ball",
-            "isUpdatedByPhysics": false,
-            "isVisible": true,
-            "isWireFrame": false,
-            "materialDiffuse": {
-                "a": 1.0,
-                "b": 1.0,
-                "g": 1.0,
-                "r": 1.0
-            },
-            "materialSpecular": {
-                "b": 1.0,
-                "g": 1.0,
-                "power": 1.0,
-                "r": 1.0
-            },
-            "meshName": "cueBall.ply",
-            "position": {
-                "x": 30.0,
-                "y": 4.20,
-                "z": 0.0
-            },
-            "postRotation": {
-                "x": 0.0,
-                "y": -0.0,
-                "z": 0.0
-            },
-            "scale": 1.0,
-            "useVertexColor": false,
-            "velocity": {
-                "x": 0.0,
-                "y": 0.0,
-                "z": 0.0
-            }
-        },
-        {
-            "acceleration": {
-                "x": 0.0,
-                "y": 0.0,
-                "z": 0.0
-            },
-            "dontLight": false,
-            "friendlyName": "Ball2",
-            "isUpdatedByPhysics": false,
-            "isVisible": true,
-            "isWireFrame": false,
-            "materialDiffuse": {
-                "a": 1.0,
-                "b": 1.0,
-                "g": 1.0,
-                "r": 1.0
-            },
-            "materialSpecular": {
-                "b": 1.0,
-                "g": 1.0,
-                "power": 1.0,
-                "r": 1.0
-            },
-            "meshName": "cueBall.ply",
-            "position": {
-                "x": 0.0,
-                "y": 4.20,
-                "z": 40.0
-            },
-            "postRotation": {
-                "x": 0.0,
-                "y": -0.0,
-                "z": 0.0
-            },
-            "scale": 1.0,
-            "useVertexColor": false,
-            "velocity": {
-                "x": 0.0,
-                "y": 0.0,
-                "z": 0.0
-            }
-        },
-        {
-            "acceleration": {
-                "x": 0.0,
-                "y": 0.0,
-                "z": 0.0
-            },
-            "dontLight": true,
-            "friendlyName": "Ball3",
-            "isUpdatedByPhysics": false,
-            "isVisible": true,
-            "isWireFrame": false,
-            "materialDiffuse": {
-                "a": 1.0,
-                "b": 1.0,
-                "g": 1.0,
-                "r": 1.0
-            },
-            "materialSpecular": {
-                "b": 1.0,
-                "g": 1.0,
-                "power": 1.0,
-                "r": 1.0
-            },
-            "meshName": "cueBall.ply",
-            "position": {
-                "x": -30.0,
-                "y": 4.20,
-                "z": -30.0
-            },
-            "postRotation": {
-                "x": 0.0,
-                "y": -0.0,
-                "z": 0.0
-            },
-            "scale": 1.0,
-            "useVertexColor": false,
-            "velocity": {
-                "x": 0.0,
-                "y": 0.0,
-                "z": 0.0
-            }
-        },
-        {
-            "acceleration": {
-                "x": 0.0,
-                "y": 0.0,
-                "z": 0.0
-            },
-            "dontLight": false,
-            "friendlyName": "Ball4",
-            "isUpdatedByPhysics": false,
-            "isVisible": true,
-            "isWireFrame": false,
-            "materialDiffuse": {
-                "a": 1.0,
-                "b": 1.0,
-                "g": 1.0,
-                "r": 1.0
-            },
-            "materialSpecular": {
-                "b": 1.0,
-                "g": 1.0,
-                "power": 1.0,
-                "r": 1.0
-            },
-            "meshName": "cueBall.ply",
-            "position": {
-                "x": 60.0,
-                "y": 4.20,
-                "z": -20.0
-            },
-            "postRotation": {
-                "x": 0.0,
-                "y": -0.0,
-                "z": 0.0
-            },
-            "scale": 1.0,
-            "useVertexColor": false,
-            "velocity": {
-                "x": 0.0,
-                "y": 0.0,
-                "z": 0.0
-            },
-            "textures": [
-                {
-                    "name": "wall.bmp",
-                    "strength": 1.0
-                }
-            ]
-        },
-        {
-            "acceleration": {
-                "x": 0.0,
-                "y": 0.0,
-                "z": 0.0
-            },
-            "dontLight": false,
-            "friendlyName": "Ball5",
-            "isUpdatedByPhysics": false,
-            "isVisible": true,
-            "isWireFrame": false,
-            "materialDiffuse": {
-                "a": 1.0,
-                "b": 1.0,
-                "g": 1.0,
-                "r": 1.0
-            },
-            "materialSpecular": {
-                "b": 1.0,
-                "g": 1.0,
-                "power": 1.0,
-                "r": 1.0
-            },
-            "meshName": "cueBall.ply",
-            "position": {
-                "x": 90.0,
-                "y": 4.20,
-                "z": 10.0
-            },
-            "postRotation": {
-                "x": 0.0,
-                "y": -0.0,
-                "z": 0.0
-            },
-            "scale": 1.0,
-            "useVertexColor": false,
-            "velocity": {
-                "x": 0.0,
-                "y": 0.0,
-                "z": 0.0
-            },
-            "textures": [
-                {
-                    "name": "wall.bmp",
-                    "strength": 1.0
-                }
-            ]
-        },
-        {
-            "acceleration": {
-                "x": 0.0,
-                "y": 0.0,
-                "z": 0.0
-            },
-            "dontLight": false,
             "friendlyName": "ground",
             "isUpdatedByPhysics": false,
             "isVisible": true,
             "isWireFrame": false,
             "materialDiffuse": {
                 "a": 1.0,
-                "b": 1.0,
-                "g": 1.0,
-                "r": 1.0
+                "b": 0.0,
+                "g": 0.800000011920929,
+                "r": 0.0
             },
             "materialSpecular": {
                 "b": 1.0,

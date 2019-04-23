@@ -86,6 +86,9 @@ public:
 	bool blur;
 	bool drawReticle;
 	bool stencil;
+
+	bool toon;
+	void cartoonize();
 private:
 	static cSceneUtils* pSceneUtils;
 	int selectedObjectIndex;

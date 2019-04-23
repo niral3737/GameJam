@@ -41,6 +41,11 @@ void cUserIO::key_callback(GLFWwindow * window, int key, int scancode, int actio
 		sceneUtils->selectedCharacter->mesh->currentAnimation = "Idle";
 		sceneUtils->selectNextCharacter();
 	}
+	if (key == GLFW_KEY_C && action == GLFW_PRESS)
+	{
+		sceneUtils->toon = !sceneUtils->toon;
+		sceneUtils->cartoonize();
+	}
 	
 	if (key == GLFW_KEY_B && action == GLFW_PRESS)
 	{
@@ -140,6 +145,18 @@ void cUserIO::key_callback(GLFWwindow * window, int key, int scancode, int actio
 	if (key == GLFW_KEY_KP_2 && action == GLFW_PRESS)
 	{
 		skinnedMesh->currentAnimation = "Unarmed-Walk";
+	}
+
+	if (key == GLFW_KEY_KP_ADD && action == GLFW_PRESS)
+	{
+		if (selectionMode == eSelectionMode::MESH_SELECTION)
+		{
+			sceneUtils->selectNextMeshObject(includeInvisibleObjects);
+		}
+		else if (selectionMode == eSelectionMode::LIGHT_SELECTION)
+		{
+			lightManager->selectNextLight();
+		}
 	}
 
 	if (key == GLFW_KEY_M && action == GLFW_PRESS)
@@ -727,52 +744,58 @@ void cUserIO::mSaveSettings()
 
 	//saving meshobjects
 	size_t numObjects = sceneUtils->vecObjectsToDraw.size();
+	size_t ctr = 0;
 	for (unsigned int index = 0; index != numObjects; index++)
 	{
 		cMeshObject* object = (cMeshObject*) sceneUtils->vecObjectsToDraw[index];
-		json["meshes"][index]["meshName"] = object->meshName;
-		json["meshes"][index]["friendlyName"] = object->friendlyName;
-		json["meshes"][index]["isWireFrame"] = object->isWireFrame;
-		json["meshes"][index]["isVisible"] = object->isVisible;
-		json["meshes"][index]["useVertexColor"] = object->useVertexColor;
-		json["meshes"][index]["dontLight"] = object->dontLight;
+		if (object->pSimpleSkinnedMesh != NULL)
+		{
+			continue;
+		}
+		json["meshes"][ctr]["meshName"] = object->meshName;
+		json["meshes"][ctr]["friendlyName"] = object->friendlyName;
+		json["meshes"][ctr]["isWireFrame"] = object->isWireFrame;
+		json["meshes"][ctr]["isVisible"] = object->isVisible;
+		json["meshes"][ctr]["useVertexColor"] = object->useVertexColor;
+		json["meshes"][ctr]["dontLight"] = object->dontLight;
 
-		json["meshes"][index]["position"]["x"] = object->position.x;
-		json["meshes"][index]["position"]["y"] = object->position.y;
-		json["meshes"][index]["position"]["z"] = object->position.z;
+		json["meshes"][ctr]["position"]["x"] = object->position.x;
+		json["meshes"][ctr]["position"]["y"] = object->position.y;
+		json["meshes"][ctr]["position"]["z"] = object->position.z;
 
 		glm::vec3 eularAngles = glm::eulerAngles(object->getOrientation());
-		json["meshes"][index]["postRotation"]["x"] = eularAngles.x;
-		json["meshes"][index]["postRotation"]["y"] = eularAngles.y;
-		json["meshes"][index]["postRotation"]["z"] = eularAngles.z;
+		json["meshes"][ctr]["postRotation"]["x"] = eularAngles.x;
+		json["meshes"][ctr]["postRotation"]["y"] = eularAngles.y;
+		json["meshes"][ctr]["postRotation"]["z"] = eularAngles.z;
 
-		json["meshes"][index]["materialDiffuse"]["r"] = object->materialDiffuse.r;
-		json["meshes"][index]["materialDiffuse"]["g"] = object->materialDiffuse.g;
-		json["meshes"][index]["materialDiffuse"]["b"] = object->materialDiffuse.b;
-		json["meshes"][index]["materialDiffuse"]["a"] = object->materialDiffuse.a;
+		json["meshes"][ctr]["materialDiffuse"]["r"] = object->materialDiffuse.r;
+		json["meshes"][ctr]["materialDiffuse"]["g"] = object->materialDiffuse.g;
+		json["meshes"][ctr]["materialDiffuse"]["b"] = object->materialDiffuse.b;
+		json["meshes"][ctr]["materialDiffuse"]["a"] = object->materialDiffuse.a;
 
-		json["meshes"][index]["materialSpecular"]["r"] = object->materialSpecular.r;
-		json["meshes"][index]["materialSpecular"]["g"] = object->materialSpecular.g;
-		json["meshes"][index]["materialSpecular"]["b"] = object->materialSpecular.b;
-		json["meshes"][index]["materialSpecular"]["power"] = object->materialSpecular.a;
+		json["meshes"][ctr]["materialSpecular"]["r"] = object->materialSpecular.r;
+		json["meshes"][ctr]["materialSpecular"]["g"] = object->materialSpecular.g;
+		json["meshes"][ctr]["materialSpecular"]["b"] = object->materialSpecular.b;
+		json["meshes"][ctr]["materialSpecular"]["power"] = object->materialSpecular.a;
 
-		json["meshes"][index]["scale"] = object->scale;
+		json["meshes"][ctr]["scale"] = object->scale;
 
-		json["meshes"][index]["isUpdatedByPhysics"] = object->isUpdatedByPhysics;
+		json["meshes"][ctr]["isUpdatedByPhysics"] = object->isUpdatedByPhysics;
 
-		json["meshes"][index]["velocity"]["x"] = object->velocity.x;
-		json["meshes"][index]["velocity"]["y"] = object->velocity.y;
-		json["meshes"][index]["velocity"]["z"] = object->velocity.z;
+		json["meshes"][ctr]["velocity"]["x"] = object->velocity.x;
+		json["meshes"][ctr]["velocity"]["y"] = object->velocity.y;
+		json["meshes"][ctr]["velocity"]["z"] = object->velocity.z;
 
-		json["meshes"][index]["acceleration"]["x"] = object->acceleration.x;
-		json["meshes"][index]["acceleration"]["y"] = object->acceleration.y;
-		json["meshes"][index]["acceleration"]["z"] = object->acceleration.z;
+		json["meshes"][ctr]["acceleration"]["x"] = object->acceleration.x;
+		json["meshes"][ctr]["acceleration"]["y"] = object->acceleration.y;
+		json["meshes"][ctr]["acceleration"]["z"] = object->acceleration.z;
 
 		for (size_t j = 0; j < object->vecTextures.size(); j++)
 		{
-			json["meshes"][index]["textures"][j]["name"] = object->vecTextures[j].name;
-			json["meshes"][index]["textures"][j]["strength"] = object->vecTextures[j].strength;
+			json["meshes"][ctr]["textures"][j]["name"] = object->vecTextures[j].name;
+			json["meshes"][ctr]["textures"][j]["strength"] = object->vecTextures[j].strength;
 		}
+		ctr++;
 	}
 
 	ofs << std::setw(4) << json << std::endl;
