@@ -109,15 +109,6 @@ int main(int argc, char** argv)
 	sceneUtils->g_pFBOMain = new cFBO();
 	std::string FBOErrorString;
 	// This is a 16x9 aspect ratio
-	if (sceneUtils->g_pFBOMain->init(1080, 1080, FBOErrorString))
-		//	if ( ::g_pFBOMain->init( 256, 256, FBOErrorString ) )
-	{
-		std::cout << "Framebuffer is good to go!" << std::endl;
-	}
-	else
-	{
-		std::cout << "Framebuffer is NOT complete" << std::endl;
-	}
 	// Point back to default frame buffer
 	glBindFramebuffer(GL_FRAMEBUFFER, 0);
 	int renderPassNumber = 1;
@@ -141,6 +132,18 @@ int main(int argc, char** argv)
 	GLint eyeLocation_location = glGetUniformLocation(program, "eyeLocation");
 
 	GLFWwindow* window = cGLFWUtils::getWindowInstance();
+
+	int fbWidth, fbHeight;
+	glfwGetFramebufferSize(window, &fbWidth, &fbHeight);
+	if (sceneUtils->g_pFBOMain->init(fbWidth, fbHeight, FBOErrorString))
+		//	if ( ::g_pFBOMain->init( 256, 256, FBOErrorString ) )
+	{
+		std::cout << "Framebuffer is good to go!" << std::endl;
+	}
+	else
+	{
+		std::cout << "Framebuffer is NOT complete" << std::endl;
+	}
 
 	cPhysics* physics = new cPhysics();
 
@@ -382,6 +385,7 @@ int main(int argc, char** argv)
 		}
 		float ratio;
 		int width, height;
+		glfwGetFramebufferSize(window, &width, &height);
 		//glm::mat4x4 matProjection = glm::mat4(1.0f);
 		//glm::mat4x4	matView = glm::mat4(1.0f);
 
@@ -393,12 +397,11 @@ int main(int argc, char** argv)
 		//glViewport(0, 0, 2500, 2500);
 		if (TwoPass)
 		{
-			ratio = 1080 / (float)900;
-			glViewport(0, 0, 1080, 900);
+			ratio = width / (float)height;
+			glViewport(0, 0, width, height);
 		}
 		else
 		{
-			glfwGetFramebufferSize(window, &width, &height);
 			ratio = width / (float) height;
 			glViewport(0, 0, width, height);
 		}
